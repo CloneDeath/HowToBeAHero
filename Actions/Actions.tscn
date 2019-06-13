@@ -66,3 +66,12 @@ Requires = [ "Frond" ]
 RequiredAmount = [ 1 ]
 Produces = [ "Leaf" ]
 ProducedAmount = [ 12 ]
+
+[node name="Make Leaf Bundle" parent="." instance=ExtResource( 2 )]
+margin_left = 627.0
+margin_right = 723.0
+text = "Make Leaf Bundle"
+Requires = [ "Leaf" ]
+RequiredAmount = [ 8 ]
+Produces = [ "Leaf Bundle" ]
+ProducedAmount = [ 1 ]
