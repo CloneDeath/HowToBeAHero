@@ -15,3 +15,17 @@ func _process(_delta):
 	$Image.texture = ResourceTexture;
 	if (count > 0):
 		self.visible = true;
+
+func has_resource(resource, amount):
+	return name == resource && count >= amount;
+
+func resource_is_visible(resource):
+	return name == resource && self.visible;
+
+func take_resource(resource, amount):
+	if (name != resource): return;
+	count -= amount;
+
+func give_resource(resource, amount):
+	if (name != resource): return;
+	count += amount;

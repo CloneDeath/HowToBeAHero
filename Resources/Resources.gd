@@ -1,29 +1,21 @@
-extends HBoxContainer
+extends Control
 
-func has_resources(input, input_count):
-	for i in range(input.size()):
-		var resource = input[i];
-		var amount = input_count[i];
-		var child = get_node(resource);
-		if (child.count < amount): return false;
-	return true;
+func has_resource(resource, amount):
+	for child in get_children():
+		if (child.has_resource(resource, amount)):
+			return true;
+	return false;
 
-func resources_are_visible(input):
-	for resource in input:
-		var child = get_node(resource);
-		if (!child.visible): return false;
-	return true;
+func resource_is_visible(resource):
+	for child in get_children():
+		if (child.resource_is_visible(resource)):
+			return true;
+	return false;
 
-func take_resources(input, input_count):
-	for i in range(input.size()):
-		var resource = input[i];
-		var amount = input_count[i];
-		var child = get_node(resource);
-		child.count -= amount;
+func take_resource(resource, amount):
+	for child in get_children():
+		child.take_resource(resource, amount);
 
-func give_resources(output, output_count):
-	for i in range(output.size()):
-		var resource = output[i];
-		var amount = output_count[i];
-		var child = get_node(resource);
-		child.count += amount;
+func give_resource(resource, amount):
+	for child in get_children():
+		child.give_resource(resource, amount);

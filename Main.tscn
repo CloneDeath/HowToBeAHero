@@ -16,13 +16,13 @@ anchor_bottom = 1.0
 [node name="Resources" parent="VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1024.0
+margin_right = 1064.0
 margin_bottom = 60.0
 
 [node name="Actions" parent="VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 64.0
-margin_right = 1024.0
+margin_right = 1064.0
 margin_bottom = 164.0
 [connection signal="action_pressed" from="VBoxContainer/Actions" to="." method="_on_action_pressed"]
