@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Resources.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Resource.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Images/Wood.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Images/Fire.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Images/Loya Cane.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Images/Cane Strips.png" type="Texture" id=6]
+
+[node name="Resources" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Stone" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_top = 266.0
+margin_right = 32.0
+margin_bottom = 334.0
+
+[node name="Image" parent="Stone" index="0"]
+margin_right = 32.0
+
+[node name="Name" parent="Stone" index="1"]
+margin_right = 32.0
+text = "Stone"
+
+[node name="Count" parent="Stone" index="2"]
+margin_right = 32.0
+
+[node name="Wood" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 36.0
+margin_top = 266.0
+margin_right = 68.0
+margin_bottom = 334.0
+
+[node name="Image" parent="Wood" index="0"]
+margin_right = 32.0
+texture = ExtResource( 3 )
+
+[node name="Name" parent="Wood" index="1"]
+margin_right = 32.0
+text = "Wood"
+
+[node name="Count" parent="Wood" index="2"]
+margin_right = 32.0
+
+[node name="Fire" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 72.0
+margin_top = 266.0
+margin_right = 104.0
+margin_bottom = 334.0
+
+[node name="Image" parent="Fire" index="0"]
+margin_right = 32.0
+texture = ExtResource( 4 )
+
+[node name="Name" parent="Fire" index="1"]
+margin_right = 32.0
+text = "Fire"
+
+[node name="Count" parent="Fire" index="2"]
+margin_right = 32.0
+
+[node name="Loya Cane" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 108.0
+margin_top = 266.0
+margin_right = 157.0
+margin_bottom = 334.0
+
+[node name="Image" parent="Loya Cane" index="0"]
+margin_right = 49.0
+texture = ExtResource( 5 )
+
+[node name="Name" parent="Loya Cane" index="1"]
+margin_right = 49.0
+text = "Loya Cane"
+
+[node name="Count" parent="Loya Cane" index="2"]
+margin_right = 49.0
+
+[node name="Cane Strips" parent="." instance=ExtResource( 2 )]
+margin_left = 161.0
+margin_top = 266.0
+margin_right = 216.0
+margin_bottom = 334.0
+
+[node name="Image" parent="Cane Strips" index="0"]
+margin_right = 55.0
+texture = ExtResource( 6 )
+
+[node name="Name" parent="Cane Strips" index="1"]
+margin_right = 55.0
+text = "Cane Strips"
+
+[node name="Count" parent="Cane Strips" index="2"]
+margin_right = 55.0
+
+[editable path="Stone"]
+
+[editable path="Wood"]
+
+[editable path="Fire"]
+
+[editable path="Loya Cane"]
+
+[editable path="Cane Strips"]
