@@ -42,6 +42,7 @@ func get_products():
 
 func _pressed():
 	emit_signal("action_pressed", Requires, RequiredAmount, Produces, ProducedAmount);
+	self.icon = null;
 
 func _process(_delta):
 	self.text = name;
