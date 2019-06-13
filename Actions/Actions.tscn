@@ -3,23 +3,29 @@
 [ext_resource path="res://Actions/Actions.gd" type="Script" id=1]
 [ext_resource path="res://Actions/Action.tscn" type="PackedScene" id=2]
 
-[node name="Actions" type="GridContainer"]
+[node name="Actions" type="HBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-columns = 11
 script = ExtResource( 1 )
 
-[node name="Gather Stone" parent="." instance=ExtResource( 2 )]
-margin_right = 73.0
+[node name="Stone" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_right = 80.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Gather Stone" parent="Stone" instance=ExtResource( 2 )]
+margin_right = 80.0
 hint_tooltip = "Requires: Nothing
 Produces: Stone x1"
 text = "Gather Stone"
 Produces = [ "Stone" ]
 ProducedAmount = [ 1 ]
 
-[node name="Crush Stone" parent="." instance=ExtResource( 2 )]
-margin_left = 77.0
-margin_right = 146.0
+[node name="Crush Stone" parent="Stone" instance=ExtResource( 2 )]
+margin_top = 24.0
+margin_right = 80.0
+margin_bottom = 44.0
 hint_tooltip = "Requires: Brick x30
 Produces: Forge x1"
 text = "Crush Stone"
@@ -28,9 +34,10 @@ RequiredAmount = [ 1.5 ]
 Produces = [ "Crushed Stone" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Sharpen Stone" parent="." instance=ExtResource( 2 )]
-margin_left = 150.0
-margin_right = 230.0
+[node name="Sharpen Stone" parent="Stone" instance=ExtResource( 2 )]
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 68.0
 hint_tooltip = "Requires: Stone x1
 Produces: Sharp Stone x1"
 text = "Sharpen Stone"
@@ -39,73 +46,25 @@ RequiredAmount = [ 1.1 ]
 Produces = [ "Sharp Stone" ]
 ProducedAmount = [ 1 ]
 
-[node name="Chop Wood" parent="." instance=ExtResource( 2 )]
-margin_left = 234.0
-margin_right = 301.0
-hint_tooltip = "Requires: Sharp Stone x1
-Produces: Wood x1"
-text = "Chop Wood"
-Requires = [ "Sharp Stone" ]
-RequiredAmount = [ 0.1 ]
-Produces = [ "Wood" ]
-ProducedAmount = [ 1 ]
+[node name="Leaves" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 84.0
+margin_right = 214.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
 
-[node name="Start Fire" parent="." instance=ExtResource( 2 )]
-margin_left = 305.0
-margin_right = 413.0
-hint_tooltip = "Requires: Wood x1
-Produces: Fire x1"
-text = "Start Fire"
-Requires = [ "Wood" ]
-RequiredAmount = [ 1 ]
-Produces = [ "Fire" ]
-ProducedAmount = [ 1 ]
-
-[node name="Make Charcoal" parent="." instance=ExtResource( 2 )]
-margin_left = 417.0
-margin_right = 511.0
-hint_tooltip = "Requires: Wood x1, Fire x1
-Produces: Charcoal x1"
-text = "Make Charcoal"
-Requires = [ "Wood", "Fire" ]
-RequiredAmount = [ 1.0, 0.1 ]
-Produces = [ "Charcoal" ]
-ProducedAmount = [ 1 ]
-
-[node name="Gather Loya Cane" parent="." instance=ExtResource( 2 )]
-margin_left = 515.0
-margin_right = 612.0
-hint_tooltip = "Requires: Sharp Stone x1
-Produces: Loya Cane x5"
-text = "Gather Loya Cane"
-Requires = [ "Sharp Stone" ]
-RequiredAmount = [ 0.1 ]
-Produces = [ "Loya Cane" ]
-ProducedAmount = [ 1 ]
-
-[node name="Make Cane Strips" parent="." instance=ExtResource( 2 )]
-margin_left = 616.0
-margin_right = 712.0
-hint_tooltip = "Requires: Sharp Stone x1, Loya Cane x1
-Produces: Cane Strip x4"
-text = "Make Cane Strips"
-Requires = [ "Sharp Stone", "Loya Cane" ]
-RequiredAmount = [ 0.1, 1.0 ]
-Produces = [ "Cane Strip" ]
-ProducedAmount = [ 4 ]
-
-[node name="Gather Fronds" parent="." instance=ExtResource( 2 )]
-margin_left = 716.0
-margin_right = 795.0
+[node name="Gather Fronds" parent="Leaves" instance=ExtResource( 2 )]
+margin_right = 130.0
 hint_tooltip = "Requires: Nothing
 Produces: Frond x1"
 text = "Gather Fronds"
 Produces = [ "Frond" ]
 ProducedAmount = [ 1 ]
 
-[node name="Strip Leaves from Frond" parent="." instance=ExtResource( 2 )]
-margin_left = 799.0
-margin_right = 929.0
+[node name="Strip Leaves from Frond" parent="Leaves" instance=ExtResource( 2 )]
+margin_top = 24.0
+margin_right = 130.0
+margin_bottom = 44.0
 hint_tooltip = "Requires: Frond x1
 Produces: Leaf x12"
 text = "Strip Leaves from Frond"
@@ -114,9 +73,39 @@ RequiredAmount = [ 1 ]
 Produces = [ "Leaf" ]
 ProducedAmount = [ 12 ]
 
-[node name="Make Leaf Bundle" parent="." instance=ExtResource( 2 )]
-margin_left = 933.0
-margin_right = 1029.0
+[node name="Basket" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 218.0
+margin_right = 315.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Gather Loya Cane" parent="Basket" instance=ExtResource( 2 )]
+margin_right = 97.0
+hint_tooltip = "Requires: Sharp Stone x1
+Produces: Loya Cane x5"
+text = "Gather Loya Cane"
+Requires = [ "Sharp Stone" ]
+RequiredAmount = [ 0.1 ]
+Produces = [ "Loya Cane" ]
+ProducedAmount = [ 1 ]
+
+[node name="Make Cane Strips" parent="Basket" instance=ExtResource( 2 )]
+margin_top = 24.0
+margin_right = 97.0
+margin_bottom = 44.0
+hint_tooltip = "Requires: Sharp Stone x1, Loya Cane x1
+Produces: Cane Strip x4"
+text = "Make Cane Strips"
+Requires = [ "Sharp Stone", "Loya Cane" ]
+RequiredAmount = [ 0.1, 1.0 ]
+Produces = [ "Cane Strip" ]
+ProducedAmount = [ 4 ]
+
+[node name="Make Leaf Bundle" parent="Basket" instance=ExtResource( 2 )]
+margin_top = 48.0
+margin_right = 97.0
+margin_bottom = 68.0
 hint_tooltip = "Requires: Leaf x8, Cane Strip x1
 Produces: Leaf Bundle x1"
 text = "Make Leaf Bundle"
@@ -125,10 +114,10 @@ RequiredAmount = [ 8, 1 ]
 Produces = [ "Leaf Bundle" ]
 ProducedAmount = [ 1 ]
 
-[node name="Make Basket" parent="." instance=ExtResource( 2 )]
-margin_top = 24.0
-margin_right = 73.0
-margin_bottom = 44.0
+[node name="Make Basket" parent="Basket" instance=ExtResource( 2 )]
+margin_top = 72.0
+margin_right = 97.0
+margin_bottom = 92.0
 hint_tooltip = "Requires: Leaf Bundle x10, Cane Strip x30, Frond x10
 Produces: Basket x1"
 text = "Make Basket"
@@ -137,76 +126,56 @@ RequiredAmount = [ 10, 30, 10 ]
 Produces = [ "Basket" ]
 ProducedAmount = [ 1 ]
 
-[node name="Gather Clay" parent="." instance=ExtResource( 2 )]
-margin_left = 77.0
-margin_top = 24.0
-margin_right = 146.0
-margin_bottom = 44.0
-hint_tooltip = "Requires: Leaf Bundle x10, Cane Strip x30, Frond x10
-Produces: Basket x1"
-text = "Gather Clay"
-Requires = [ "Basket" ]
+[node name="Wood" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 319.0
+margin_right = 400.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Chop Wood" parent="Wood" instance=ExtResource( 2 )]
+margin_right = 81.0
+hint_tooltip = "Requires: Sharp Stone x1
+Produces: Wood x1"
+text = "Chop Wood"
+Requires = [ "Sharp Stone" ]
 RequiredAmount = [ 0.1 ]
-Produces = [ "Clay" ]
-ProducedAmount = [ 10 ]
+Produces = [ "Wood" ]
+ProducedAmount = [ 1 ]
 
-[node name="Fire Brick" parent="." instance=ExtResource( 2 )]
-margin_left = 150.0
+[node name="Start Fire" parent="Wood" instance=ExtResource( 2 )]
 margin_top = 24.0
-margin_right = 230.0
+margin_right = 81.0
 margin_bottom = 44.0
-hint_tooltip = "Requires: Basket x0.1
-Produces: Clay x10"
-text = "Fire Brick"
-Requires = [ "Clay", "Fire" ]
+hint_tooltip = "Requires: Wood x1
+Produces: Fire x1"
+text = "Start Fire"
+Requires = [ "Wood" ]
+RequiredAmount = [ 1 ]
+Produces = [ "Fire" ]
+ProducedAmount = [ 1 ]
+
+[node name="Make Charcoal" parent="Wood" instance=ExtResource( 2 )]
+margin_top = 48.0
+margin_right = 81.0
+margin_bottom = 68.0
+hint_tooltip = "Requires: Wood x1, Fire x1
+Produces: Charcoal x1"
+text = "Make Charcoal"
+Requires = [ "Wood", "Fire" ]
 RequiredAmount = [ 1.0, 0.1 ]
-Produces = [ "Brick" ]
+Produces = [ "Charcoal" ]
 ProducedAmount = [ 1 ]
 
-[node name="Make Forge" parent="." instance=ExtResource( 2 )]
-margin_left = 234.0
-margin_top = 24.0
-margin_right = 301.0
-margin_bottom = 44.0
-hint_tooltip = "Requires: Clay x1, Fire x0.1
-Produces: Brick x1"
-text = "Make Forge"
-Requires = [ "Brick" ]
-RequiredAmount = [ 30.0 ]
-Produces = [ "Forge" ]
-ProducedAmount = [ 1 ]
+[node name="Axe" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 404.0
+margin_right = 494.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
 
-[node name="Smelt Crushed Stone" parent="." instance=ExtResource( 2 )]
-margin_left = 305.0
-margin_top = 24.0
-margin_right = 413.0
-margin_bottom = 44.0
-hint_tooltip = "Requires: Clay x1, Fire x0.1
-Produces: Brick x1"
-text = "Smelt Crushed Stone"
-Requires = [ "Crushed Stone", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 10.0, 0.1, 0.1, 10.0 ]
-Produces = [ "Iron Clump" ]
-ProducedAmount = [ 3.0 ]
-
-[node name="Smelt Iron Clump" parent="." instance=ExtResource( 2 )]
-margin_left = 417.0
-margin_top = 24.0
-margin_right = 511.0
-margin_bottom = 44.0
-hint_tooltip = "Requires: Crushed Stone x10, Forge x0.1
-Produces: Iron Clump x3"
-text = "Smelt Iron Clump"
-Requires = [ "Iron Clump", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 7.0, 0.1, 0.1, 10.0 ]
-Produces = [ "Iron Ingot" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Make Axe Handle" parent="." instance=ExtResource( 2 )]
-margin_left = 515.0
-margin_top = 24.0
-margin_right = 612.0
-margin_bottom = 44.0
+[node name="Make Axe Handle" parent="Axe" instance=ExtResource( 2 )]
+margin_right = 90.0
 hint_tooltip = "Requires: Wood x1, Sharp Stone x1
 Produces: Axe Handle x1"
 text = "Make Axe Handle"
@@ -215,10 +184,9 @@ RequiredAmount = [ 1.0, 0.1 ]
 Produces = [ "Axe Handle" ]
 ProducedAmount = [ 1 ]
 
-[node name="Make Axe" parent="." instance=ExtResource( 2 )]
-margin_left = 616.0
+[node name="Make Axe" parent="Axe" instance=ExtResource( 2 )]
 margin_top = 24.0
-margin_right = 712.0
+margin_right = 90.0
 margin_bottom = 44.0
 hint_tooltip = "Requires: Axe Handle x1, Sharp Stone x1
 Produces: Axe x1"
@@ -228,11 +196,10 @@ RequiredAmount = [ 1, 1 ]
 Produces = [ "Axe" ]
 ProducedAmount = [ 1 ]
 
-[node name="Chop Tree" parent="." instance=ExtResource( 2 )]
-margin_left = 716.0
-margin_top = 24.0
-margin_right = 795.0
-margin_bottom = 44.0
+[node name="Chop Tree" parent="Axe" instance=ExtResource( 2 )]
+margin_top = 48.0
+margin_right = 90.0
+margin_bottom = 68.0
 hint_tooltip = "Requires: Axe x1
 Produces: Wood x30"
 text = "Chop Tree"
@@ -240,3 +207,73 @@ Requires = [ "Axe" ]
 RequiredAmount = [ 0.1 ]
 Produces = [ "Wood" ]
 ProducedAmount = [ 30 ]
+
+[node name="Clay" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 498.0
+margin_right = 565.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Gather Clay" parent="Clay" instance=ExtResource( 2 )]
+margin_right = 67.0
+hint_tooltip = "Requires: Leaf Bundle x10, Cane Strip x30, Frond x10
+Produces: Basket x1"
+text = "Gather Clay"
+Requires = [ "Basket" ]
+RequiredAmount = [ 0.1 ]
+Produces = [ "Clay" ]
+ProducedAmount = [ 10 ]
+
+[node name="Fire Brick" parent="Clay" instance=ExtResource( 2 )]
+margin_top = 24.0
+margin_right = 67.0
+margin_bottom = 44.0
+hint_tooltip = "Requires: Basket x0.1
+Produces: Clay x10"
+text = "Fire Brick"
+Requires = [ "Clay", "Fire" ]
+RequiredAmount = [ 1.0, 0.1 ]
+Produces = [ "Brick" ]
+ProducedAmount = [ 1 ]
+
+[node name="Make Forge" parent="Clay" instance=ExtResource( 2 )]
+margin_top = 48.0
+margin_right = 67.0
+margin_bottom = 68.0
+hint_tooltip = "Requires: Clay x1, Fire x0.1
+Produces: Brick x1"
+text = "Make Forge"
+Requires = [ "Brick" ]
+RequiredAmount = [ 30.0 ]
+Produces = [ "Forge" ]
+ProducedAmount = [ 1 ]
+
+[node name="Iron" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 569.0
+margin_right = 677.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Smelt Crushed Stone" parent="Iron" instance=ExtResource( 2 )]
+margin_right = 108.0
+hint_tooltip = "Requires: Clay x1, Fire x0.1
+Produces: Brick x1"
+text = "Smelt Crushed Stone"
+Requires = [ "Crushed Stone", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 10.0, 0.1, 0.1, 10.0 ]
+Produces = [ "Iron Clump" ]
+ProducedAmount = [ 3.0 ]
+
+[node name="Smelt Iron Clump" parent="Iron" instance=ExtResource( 2 )]
+margin_top = 24.0
+margin_right = 108.0
+margin_bottom = 44.0
+hint_tooltip = "Requires: Crushed Stone x10, Forge x0.1
+Produces: Iron Clump x3"
+text = "Smelt Iron Clump"
+Requires = [ "Iron Clump", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 7.0, 0.1, 0.1, 10.0 ]
+Produces = [ "Iron Ingot" ]
+ProducedAmount = [ 1.0 ]

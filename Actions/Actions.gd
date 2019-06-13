@@ -1,4 +1,4 @@
-extends GridContainer
+extends Control
 signal action_pressed(input, input_count, output, output_count);
 
 func _ready():
