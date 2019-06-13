@@ -6,7 +6,7 @@
 [node name="Actions" type="GridContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-columns = 20
+columns = 11
 script = ExtResource( 1 )
 
 [node name="Gather Stone" parent="." instance=ExtResource( 2 )]
@@ -104,8 +104,9 @@ Produces = [ "Axe Handle" ]
 ProducedAmount = [ 1 ]
 
 [node name="Make Axe" parent="." instance=ExtResource( 2 )]
-margin_left = 990.0
-margin_right = 1046.0
+margin_top = 24.0
+margin_right = 73.0
+margin_bottom = 44.0
 text = "Make Axe"
 Requires = [ "Axe Handle", "Sharp Stone" ]
 RequiredAmount = [ 1, 1 ]
@@ -113,8 +114,10 @@ Produces = [ "Axe" ]
 ProducedAmount = [ 1 ]
 
 [node name="Chop Tree" parent="." instance=ExtResource( 2 )]
-margin_left = 1050.0
-margin_right = 1110.0
+margin_left = 77.0
+margin_top = 24.0
+margin_right = 157.0
+margin_bottom = 44.0
 text = "Chop Tree"
 Requires = [ "Axe" ]
 RequiredAmount = [ 1 ]
