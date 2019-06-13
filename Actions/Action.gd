@@ -4,10 +4,10 @@ tool
 signal action_pressed(input, input_count, output, output_count);
 
 export(Array, String) var Requires = [];
-export(Array, int) var RequiredAmount = [];
+export(Array, float) var RequiredAmount = [];
 
 export(Array, String) var Produces = [];
-export(Array, int) var ProducedAmount = [];
+export(Array, float) var ProducedAmount = [];
 
 func _ready():
 	if (!Engine.editor_hint):

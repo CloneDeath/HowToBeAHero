@@ -11,7 +11,7 @@ func has_resources(input, input_count):
 func resources_are_visible(input):
 	for resource in input:
 		var child = get_node(resource);
-		if (child.count < 1): return false;
+		if (!child.visible): return false;
 	return true;
 
 func take_resources(input, input_count):
