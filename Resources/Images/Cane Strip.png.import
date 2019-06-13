@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cane Strips.png-5f02f01e6b821e28689db35c480fce2b.stex"
+path="res://.import/Cane Strip.png-c1cdcd21856f227274ff1de136e47a41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Images/Cane Strips.png"
-dest_files=[ "res://.import/Cane Strips.png-5f02f01e6b821e28689db35c480fce2b.stex" ]
+source_file="res://Resources/Images/Cane Strip.png"
+dest_files=[ "res://.import/Cane Strip.png-c1cdcd21856f227274ff1de136e47a41.stex" ]
 
 [params]
 

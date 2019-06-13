@@ -9,3 +9,6 @@ export(Array, int) var ProducedAmount = [];
 
 func _pressed():
 	emit_signal("action_pressed", Requires, RequiredAmount, Produces, ProducedAmount);
+
+func check_resources(resources):
+	self.disabled = !resources.has_resources(Requires, RequiredAmount);

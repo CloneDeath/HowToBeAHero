@@ -40,4 +40,29 @@ text = "Gather Loya Cane"
 Requires = [ "Stone" ]
 RequiredAmount = [ 1 ]
 Produces = [ "Loya Cane" ]
-ProducedAmount = [ 5 ]
+ProducedAmount = [ 1 ]
+
+[node name="Make Cane Strips" parent="." instance=ExtResource( 2 )]
+margin_left = 310.0
+margin_right = 406.0
+text = "Make Cane Strips"
+Requires = [ "Stone", "Loya Cane" ]
+RequiredAmount = [ 1, 1 ]
+Produces = [ "Cane Strip" ]
+ProducedAmount = [ 2 ]
+
+[node name="Gather Fronds" parent="." instance=ExtResource( 2 )]
+margin_left = 410.0
+margin_right = 489.0
+text = "Gather Fronds"
+Produces = [ "Frond" ]
+ProducedAmount = [ 1 ]
+
+[node name="Strip Leaves from Frond" parent="." instance=ExtResource( 2 )]
+margin_left = 493.0
+margin_right = 623.0
+text = "Strip Leaves from Frond"
+Requires = [ "Frond" ]
+RequiredAmount = [ 1 ]
+Produces = [ "Leaf" ]
+ProducedAmount = [ 12 ]

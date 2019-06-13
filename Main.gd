@@ -13,3 +13,6 @@ func give_resources(output, output_count):
 
 func take_resources(output, output_count):
 	$VBoxContainer/Resources.take_resources(output, output_count);
+
+func _process(_delta):
+	$VBoxContainer/Actions.check_resources($VBoxContainer/Resources);
