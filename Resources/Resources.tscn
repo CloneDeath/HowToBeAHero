@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Resources/Resources.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Resource.tscn" type="PackedScene" id=2]
@@ -27,6 +27,13 @@
 [ext_resource path="res://Resources/Images/Iron Ore.png" type="Texture" id=25]
 [ext_resource path="res://Resources/Images/Wood Pole.png" type="Texture" id=26]
 [ext_resource path="res://Resources/Images/Spear.png" type="Texture" id=27]
+[ext_resource path="res://Resources/Images/Hare.png" type="Texture" id=28]
+[ext_resource path="res://Resources/Images/Hare Pelt.png" type="Texture" id=29]
+[ext_resource path="res://Resources/Images/Leather.png" type="Texture" id=30]
+[ext_resource path="res://Resources/Images/Leather Strip.png" type="Texture" id=31]
+[ext_resource path="res://Resources/Images/Sword Mold.png" type="Texture" id=32]
+[ext_resource path="res://Resources/Images/Sword Blade.png" type="Texture" id=33]
+[ext_resource path="res://Resources/Images/Sword.png" type="Texture" id=34]
 
 [node name="Resources" type="HBoxContainer"]
 anchor_right = 1.0
@@ -240,9 +247,11 @@ margin_bottom = 252.0
 ResourceTexture = ExtResource( 25 )
 
 [node name="Spear" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 455.0
 margin_right = 503.0
 margin_bottom = 600.0
+script = ExtResource( 1 )
 
 [node name="Wood Pole" parent="Spear" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -256,3 +265,67 @@ margin_top = 64.0
 margin_right = 40.0
 margin_bottom = 124.0
 ResourceTexture = ExtResource( 27 )
+
+[node name="Leather" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 507.0
+margin_right = 571.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Hare" parent="Leather" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 16.0
+margin_right = 48.0
+ResourceTexture = ExtResource( 28 )
+
+[node name="Hare Pelt" parent="Leather" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 10.0
+margin_top = 64.0
+margin_right = 54.0
+margin_bottom = 124.0
+ResourceTexture = ExtResource( 29 )
+
+[node name="Leather" parent="Leather" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 14.0
+margin_top = 128.0
+margin_right = 50.0
+margin_bottom = 188.0
+ResourceTexture = ExtResource( 30 )
+
+[node name="Leather Strip" parent="Leather" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_top = 192.0
+margin_right = 64.0
+margin_bottom = 252.0
+ResourceTexture = ExtResource( 31 )
+
+[node name="Sword" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 575.0
+margin_right = 635.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Sword Mold" parent="Sword" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 2.0
+margin_right = 58.0
+ResourceTexture = ExtResource( 32 )
+
+[node name="Sword Blade" parent="Sword" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_top = 64.0
+margin_right = 60.0
+margin_bottom = 124.0
+ResourceTexture = ExtResource( 33 )
+
+[node name="Sword" parent="Sword" instance=ExtResource( 2 )]
+editor/display_folded = true
+margin_left = 14.0
+margin_top = 128.0
+margin_right = 46.0
+margin_bottom = 188.0
+ResourceTexture = ExtResource( 34 )
