@@ -11,7 +11,7 @@ script = ExtResource( 1 )
 
 [node name="Top Row" type="HBoxContainer" parent="."]
 editor/display_folded = true
-margin_right = 1024.0
+margin_right = 1032.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
@@ -297,19 +297,14 @@ RequiredAmount = [ 1.0, 0.1, 1.0, 10.0 ]
 Produces = [ "Iron Ingot" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Middle Row" type="HBoxContainer" parent="."]
-margin_top = 125.0
-margin_right = 1024.0
-margin_bottom = 225.0
-script = ExtResource( 1 )
-
-[node name="Pickaxe" type="VBoxContainer" parent="Middle Row"]
+[node name="Pickaxe" type="VBoxContainer" parent="Top Row"]
 editor/display_folded = true
-margin_right = 152.0
+margin_left = 880.0
+margin_right = 1032.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
-[node name="Form Pickaxe Head Mold" parent="Middle Row/Pickaxe" instance=ExtResource( 2 )]
+[node name="Form Pickaxe Head Mold" parent="Top Row/Pickaxe" instance=ExtResource( 2 )]
 margin_right = 152.0
 hint_tooltip = "Requires: Clay x2
 Produces: Pickaxe Head Mold x1"
@@ -319,7 +314,7 @@ RequiredAmount = [ 2.0 ]
 Produces = [ "Pickaxe Head Mold" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Smelt Pickaxe Head" parent="Middle Row/Pickaxe" instance=ExtResource( 2 )]
+[node name="Smelt Pickaxe Head" parent="Top Row/Pickaxe" instance=ExtResource( 2 )]
 margin_top = 26.0
 margin_right = 152.0
 margin_bottom = 48.0
@@ -331,7 +326,7 @@ RequiredAmount = [ 0.1, 1.0, 0.1, 5.0, 1.0 ]
 Produces = [ "Pickaxe Head" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Make Pickaxe" parent="Middle Row/Pickaxe" instance=ExtResource( 2 )]
+[node name="Make Pickaxe" parent="Top Row/Pickaxe" instance=ExtResource( 2 )]
 margin_top = 52.0
 margin_right = 152.0
 margin_bottom = 74.0
@@ -343,7 +338,7 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Pickaxe" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Mine Iron Ore" parent="Middle Row/Pickaxe" instance=ExtResource( 2 )]
+[node name="Mine Iron Ore" parent="Top Row/Pickaxe" instance=ExtResource( 2 )]
 margin_top = 78.0
 margin_right = 152.0
 margin_bottom = 100.0
@@ -355,10 +350,15 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Iron Ore", "Stone" ]
 ProducedAmount = [ 6.0, 24.0 ]
 
+[node name="Middle Row" type="HBoxContainer" parent="."]
+margin_top = 125.0
+margin_right = 1032.0
+margin_bottom = 225.0
+script = ExtResource( 1 )
+
 [node name="Spear" type="VBoxContainer" parent="Middle Row"]
 editor/display_folded = true
-margin_left = 156.0
-margin_right = 282.0
+margin_right = 126.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
@@ -386,8 +386,8 @@ ProducedAmount = [ 1.0 ]
 
 [node name="Leather" type="VBoxContainer" parent="Middle Row"]
 editor/display_folded = true
-margin_left = 286.0
-margin_right = 391.0
+margin_left = 130.0
+margin_right = 235.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
@@ -432,15 +432,15 @@ margin_bottom = 100.0
 hint_tooltip = "Requires: Hare Pelt x1
 Produces: Leather x1"
 text = "Strip Leather"
-Requires = [ "Leather" ]
-RequiredAmount = [ 1.0 ]
+Requires = [ "Leather", "Knife" ]
+RequiredAmount = [ 1.0, 0.1 ]
 Produces = [ "Leather Strip" ]
 ProducedAmount = [ 4.0 ]
 
 [node name="Sword" type="VBoxContainer" parent="Middle Row"]
 editor/display_folded = true
-margin_left = 395.0
-margin_right = 523.0
+margin_left = 239.0
+margin_right = 367.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
@@ -478,9 +478,51 @@ RequiredAmount = [ 1.0, 5.0 ]
 Produces = [ "Sword" ]
 ProducedAmount = [ 1.0 ]
 
+[node name="Thread" type="VBoxContainer" parent="Middle Row"]
+editor/display_folded = true
+margin_left = 371.0
+margin_right = 470.0
+margin_bottom = 100.0
+script = ExtResource( 1 )
+
+[node name="Shear Sheep" parent="Middle Row/Thread" instance=ExtResource( 2 )]
+margin_right = 99.0
+hint_tooltip = "Requires: Clay x1
+Produces: Needle Mold x1"
+text = "Shear Sheep"
+Requires = [ "Knife" ]
+RequiredAmount = [ 1.0 ]
+Produces = [ "Wool" ]
+ProducedAmount = [ 10.0 ]
+
+[node name="Make Spindle" parent="Middle Row/Thread" instance=ExtResource( 2 )]
+margin_top = 26.0
+margin_right = 99.0
+margin_bottom = 48.0
+hint_tooltip = "Requires: Knife x1
+Produces: Wool x10"
+text = "Make Spindle"
+Requires = [ "Knife", "Wood" ]
+RequiredAmount = [ 0.1, 1.0 ]
+Produces = [ "Spindle" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Spin Thread" parent="Middle Row/Thread" instance=ExtResource( 2 )]
+margin_top = 52.0
+margin_right = 99.0
+margin_bottom = 74.0
+hint_tooltip = "Requires: Knife x0.1, Wood x1
+Produces: Spindle x1"
+text = "Spin Thread"
+Requires = [ "Spindle", "Wool" ]
+RequiredAmount = [ 1.0, 1.0 ]
+Produces = [ "Thread" ]
+ProducedAmount = [ 1.0 ]
+
 [node name="Needle" type="VBoxContainer" parent="Middle Row"]
-margin_left = 527.0
-margin_right = 649.0
+editor/display_folded = true
+margin_left = 474.0
+margin_right = 596.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
@@ -519,13 +561,14 @@ Produces = [ "Needle" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Knife" type="VBoxContainer" parent="Middle Row"]
-margin_left = 653.0
-margin_right = 767.0
+editor/display_folded = true
+margin_left = 600.0
+margin_right = 719.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
 
 [node name="Form Knife Mold" parent="Middle Row/Knife" instance=ExtResource( 2 )]
-margin_right = 114.0
+margin_right = 119.0
 hint_tooltip = "Requires: Clay x1
 Produces: Needle Mold x1"
 text = "Form Knife Mold"
@@ -534,25 +577,25 @@ RequiredAmount = [ 3.0 ]
 Produces = [ "Knife Mold" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Smelt Knife" parent="Middle Row/Knife" instance=ExtResource( 2 )]
+[node name="Smelt Knife Blade" parent="Middle Row/Knife" instance=ExtResource( 2 )]
 margin_top = 26.0
-margin_right = 114.0
+margin_right = 119.0
 margin_bottom = 48.0
 hint_tooltip = "Requires: Needle Mold x0.1, Iron Ingot x1, Forge x0.1, Charcoal x10, Fire x1
 Produces: Dull Needle x1"
-text = "Smelt Knife"
+text = "Smelt Knife Blade"
 Requires = [ "Knife Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
 RequiredAmount = [ 0.1, 2.0, 0.1, 10.0, 1.0 ]
 Produces = [ "Knife Blade" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Make Knife" parent="Middle Row/Knife" instance=ExtResource( 2 )]
+[node name="Construct Knife" parent="Middle Row/Knife" instance=ExtResource( 2 )]
 margin_top = 52.0
-margin_right = 114.0
+margin_right = 119.0
 margin_bottom = 74.0
 hint_tooltip = "Requires: Dull Needle x1, Stone x1
 Produces: Needle x1"
-text = "Make Knife"
+text = "Construct Knife"
 Requires = [ "Knife Blade", "Wood", "Stone", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0, 1.0, 1.0 ]
 Produces = [ "Knife" ]
@@ -561,7 +604,7 @@ ProducedAmount = [ 1.0 ]
 [node name="Final Row" type="HBoxContainer" parent="."]
 editor/display_folded = true
 margin_top = 250.0
-margin_right = 1024.0
+margin_right = 1032.0
 margin_bottom = 298.0
 script = ExtResource( 1 )
 
