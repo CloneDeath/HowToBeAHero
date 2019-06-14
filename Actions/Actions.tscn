@@ -163,9 +163,9 @@ hint_tooltip = "Requires: Wood x1, Fire x0.1
 Produces: Charcoal x1"
 text = "Make Charcoal"
 Requires = [ "Wood", "Fire" ]
-RequiredAmount = [ 1.0, 0.1 ]
+RequiredAmount = [ 10.0, 1.0 ]
 Produces = [ "Charcoal" ]
-ProducedAmount = [ 1 ]
+ProducedAmount = [ 10 ]
 
 [node name="Axe" type="VBoxContainer" parent="."]
 editor/display_folded = true
@@ -177,7 +177,7 @@ script = ExtResource( 1 )
 [node name="Make Wood Handle" parent="Axe" instance=ExtResource( 2 )]
 margin_right = 127.0
 hint_tooltip = "Requires: Wood x1, Sharp Stone x0.1
-Produces: Axe Handle x1"
+Produces: Wood Handle x1"
 text = "Make Wood Handle"
 Requires = [ "Wood", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 0.1 ]
@@ -188,7 +188,7 @@ ProducedAmount = [ 1 ]
 margin_top = 26.0
 margin_right = 127.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Axe Handle x1, Sharp Stone x1
+hint_tooltip = "Requires: Wood Handle x1, Sharp Stone x1
 Produces: Axe x1"
 text = "Make Axe"
 Requires = [ "Wood Handle", "Sharp Stone" ]
@@ -233,9 +233,9 @@ hint_tooltip = "Requires: Clay x1, Fire x0.1
 Produces: Brick x1"
 text = "Fire Brick"
 Requires = [ "Clay", "Fire" ]
-RequiredAmount = [ 1.0, 0.1 ]
+RequiredAmount = [ 10.0, 1.0 ]
 Produces = [ "Brick" ]
-ProducedAmount = [ 1 ]
+ProducedAmount = [ 10 ]
 
 [node name="Make Forge" parent="Clay" instance=ExtResource( 2 )]
 margin_top = 52.0
@@ -250,7 +250,6 @@ Produces = [ "Forge" ]
 ProducedAmount = [ 1 ]
 
 [node name="Iron" type="VBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 741.0
 margin_right = 876.0
 margin_bottom = 600.0
@@ -262,7 +261,7 @@ hint_tooltip = "Requires: Crushed Stone x10, Forge x0.1, Fire x0.1, Charcoal x10
 Produces: Iron Clump x3"
 text = "Smelt Crushed Stone"
 Requires = [ "Crushed Stone", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 10.0, 0.1, 0.1, 10.0 ]
+RequiredAmount = [ 10.0, 0.1, 1.0, 10.0 ]
 Produces = [ "Iron Clump" ]
 ProducedAmount = [ 3.0 ]
 
@@ -274,11 +273,24 @@ hint_tooltip = "Requires: Iron Clump x7, Forge x0.1, Fire x0.1, Charcoal x10
 Produces: Iron Ingot x1"
 text = "Smelt Iron Clump"
 Requires = [ "Iron Clump", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 7.0, 0.1, 0.1, 10.0 ]
+RequiredAmount = [ 7.0, 0.1, 1.0, 10.0 ]
+Produces = [ "Iron Ingot" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Smelt Iron Ore" parent="Iron" instance=ExtResource( 2 )]
+margin_top = 52.0
+margin_right = 135.0
+margin_bottom = 74.0
+hint_tooltip = "Requires: Iron Ore x1, Forge x0.1, Fire x0.1, Charcoal x10
+Produces: Iron Ingot x1"
+text = "Smelt Iron Ore"
+Requires = [ "Iron Ore", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 1.0, 0.1, 1.0, 10.0 ]
 Produces = [ "Iron Ingot" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Pickaxe" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 880.0
 margin_right = 1032.0
 margin_bottom = 600.0
@@ -286,8 +298,8 @@ script = ExtResource( 1 )
 
 [node name="Form Pickaxe Head Mold" parent="Pickaxe" instance=ExtResource( 2 )]
 margin_right = 152.0
-hint_tooltip = "Requires: Iron Clump x7, Forge x0.1, Fire x0.1, Charcoal x10
-Produces: Iron Ingot x1"
+hint_tooltip = "Requires: Clay x2
+Produces: Pickaxe Head Mold x1"
 text = "Form Pickaxe Head Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 2.0 ]
@@ -298,10 +310,34 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 152.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Clay x2
-Produces: Pickaxe Head Mold x1"
+hint_tooltip = "Requires: Pickaxe Head Mold x0.1, Iron Ingot x1
+Produces: Pickaxe Head x1"
 text = "Smelt Pickaxe Head"
 Requires = [ "Pickaxe Head Mold", "Iron Ingot" ]
 RequiredAmount = [ 0.1, 1.0 ]
 Produces = [ "Pickaxe Head" ]
 ProducedAmount = [ 1.0 ]
+
+[node name="Make Pickaxe" parent="Pickaxe" instance=ExtResource( 2 )]
+margin_top = 52.0
+margin_right = 152.0
+margin_bottom = 74.0
+hint_tooltip = "Requires: Wood Handle x1, Pickaxe Head x1
+Produces: Pickaxe x1"
+text = "Make Pickaxe"
+Requires = [ "Wood Handle", "Pickaxe Head" ]
+RequiredAmount = [ 1.0, 1.0 ]
+Produces = [ "Pickaxe" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Mine Iron Ore" parent="Pickaxe" instance=ExtResource( 2 )]
+margin_top = 78.0
+margin_right = 152.0
+margin_bottom = 100.0
+hint_tooltip = "Requires: Pickaxe x0.1
+Produces: Iron Ore x6, Stone x24"
+text = "Mine Iron Ore"
+Requires = [ "Pickaxe" ]
+RequiredAmount = [ 0.1 ]
+Produces = [ "Iron Ore", "Stone" ]
+ProducedAmount = [ 6.0, 24.0 ]
