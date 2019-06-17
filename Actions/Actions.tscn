@@ -15,7 +15,6 @@ margin_bottom = 100.0
 script = ExtResource( 1 )
 
 [node name="Stone" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
 margin_right = 107.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
@@ -25,25 +24,15 @@ margin_right = 107.0
 hint_tooltip = "Requires: Nothing
 Produces: Stone x1"
 text = "Gather Stone"
+Requires = [  ]
+RequiredAmount = [  ]
 Produces = [ "Stone" ]
 ProducedAmount = [ 1 ]
 
-[node name="Crush Stone" parent="Top Row/Stone" instance=ExtResource( 2 )]
+[node name="Sharpen Stone" parent="Top Row/Stone" instance=ExtResource( 2 )]
 margin_top = 26.0
 margin_right = 107.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Stone x1.5
-Produces: Crushed Stone x1"
-text = "Crush Stone"
-Requires = [ "Stone" ]
-RequiredAmount = [ 1.5 ]
-Produces = [ "Crushed Stone" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Sharpen Stone" parent="Top Row/Stone" instance=ExtResource( 2 )]
-margin_top = 52.0
-margin_right = 107.0
-margin_bottom = 74.0
 hint_tooltip = "Requires: Stone x1.1
 Produces: Sharp Stone x1"
 text = "Sharpen Stone"
@@ -51,6 +40,18 @@ Requires = [ "Stone" ]
 RequiredAmount = [ 1.1 ]
 Produces = [ "Sharp Stone" ]
 ProducedAmount = [ 1 ]
+
+[node name="Crush Stone" parent="Top Row/Stone" instance=ExtResource( 2 )]
+margin_top = 52.0
+margin_right = 107.0
+margin_bottom = 74.0
+hint_tooltip = "Requires: Stone x1.5
+Produces: Crushed Stone x1"
+text = "Crush Stone"
+Requires = [ "Stone" ]
+RequiredAmount = [ 1.5 ]
+Produces = [ "Crushed Stone" ]
+ProducedAmount = [ 1.0 ]
 
 [node name="Leaves" type="VBoxContainer" parent="Top Row"]
 editor/display_folded = true
@@ -64,6 +65,8 @@ margin_right = 157.0
 hint_tooltip = "Requires: Nothing
 Produces: Frond x1"
 text = "Gather Fronds"
+Requires = [  ]
+RequiredAmount = [  ]
 Produces = [ "Frond" ]
 ProducedAmount = [ 1 ]
 
@@ -223,7 +226,7 @@ script = ExtResource( 1 )
 [node name="Gather Clay" parent="Top Row/Clay" instance=ExtResource( 2 )]
 margin_right = 94.0
 hint_tooltip = "Requires: Basket x0.1
-Produces: Clay x10"
+Produces: Clay x20"
 text = "Gather Clay"
 Requires = [ "Basket" ]
 RequiredAmount = [ 0.1 ]
@@ -286,8 +289,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 135.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Iron Ore x1, Forge x0.1, Fire x1, Charcoal x10
-Produces: Iron Ingot x1"
+hint_tooltip = "Requires: Iron Ore x10, Forge x0.1, Fire x1, Charcoal x50
+Produces: Iron Ingot x10"
 text = "Smelt Iron Ore"
 Requires = [ "Iron Ore", "Forge", "Fire", "Charcoal" ]
 RequiredAmount = [ 10.0, 0.1, 1.0, 50.0 ]
@@ -315,7 +318,7 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 152.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Pickaxe Head Mold x0.1, Iron Ingot x1
+hint_tooltip = "Requires: Pickaxe Head Mold x0.1, Iron Ingot x1, Forge x0.1, Charcoal x5, Fire x1
 Produces: Pickaxe Head x1"
 text = "Smelt Pickaxe Head"
 Requires = [ "Pickaxe Head Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
@@ -356,8 +359,8 @@ script = ExtResource( 1 )
 
 [node name="Make Wooden Pole" parent="Top Row/Spear" instance=ExtResource( 2 )]
 margin_right = 126.0
-hint_tooltip = "Requires: Pickaxe x0.1
-Produces: Iron Ore x6, Stone x24"
+hint_tooltip = "Requires: Wood x1, Sharp Stone x1
+Produces: Wood Pole x1"
 text = "Make Wooden Pole"
 Requires = [ "Wood", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -368,8 +371,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 126.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Wood x1, Sharp Stone x1
-Produces: Wood Pole x1"
+hint_tooltip = "Requires: Wood Pole x1, Sharp Stone x1
+Produces: Spear x1"
 text = "Make Spear"
 Requires = [ "Wood Pole", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -384,8 +387,8 @@ script = ExtResource( 1 )
 
 [node name="Hunt Hare" parent="Top Row/Leather" instance=ExtResource( 2 )]
 margin_right = 105.0
-hint_tooltip = "Requires: Wood Pole x1, Sharp Stone x1
-Produces: Spear x1"
+hint_tooltip = "Requires: Spear x0.1
+Produces: Hare x1"
 text = "Hunt Hare"
 Requires = [ "Spear" ]
 RequiredAmount = [ 0.1 ]
@@ -396,8 +399,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 105.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Wood Pole x1, Sharp Stone x1
-Produces: Spear x1"
+hint_tooltip = "Requires: Hare x1, Sharp Stone x1
+Produces: Hare Pelt x1"
 text = "Flay Hare"
 Requires = [ "Hare", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -408,8 +411,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 105.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Hare x1, Sharp Stone x1
-Produces: Hare Pelt x1"
+hint_tooltip = "Requires: Hare Pelt x1
+Produces: Leather x1"
 text = "Tan Hare Pelt"
 Requires = [ "Hare Pelt" ]
 RequiredAmount = [ 1.0 ]
@@ -420,8 +423,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 78.0
 margin_right = 105.0
 margin_bottom = 100.0
-hint_tooltip = "Requires: Hare Pelt x1
-Produces: Leather x1"
+hint_tooltip = "Requires: Leather x1, Knife x0.1
+Produces: Leather Strip x4"
 text = "Strip Leather"
 Requires = [ "Leather", "Knife" ]
 RequiredAmount = [ 1.0, 0.1 ]
@@ -442,8 +445,8 @@ script = ExtResource( 1 )
 
 [node name="Form Sword Mold" parent="Middle Row/Sword" instance=ExtResource( 2 )]
 margin_right = 128.0
-hint_tooltip = "Requires: Spear x1
-Produces: Hare x1"
+hint_tooltip = "Requires: Clay x5
+Produces: Sword Mold x1"
 text = "Form Sword Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 5.0 ]
@@ -454,8 +457,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 128.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Hare x1, Sharp Stone x1
-Produces: Hare Pelt x1"
+hint_tooltip = "Requires: Sword Mold x0.1, Iron Ingot x8, Forge x0.1, Charcoal x20, Fire x1
+Produces: Sword Blade x1"
 text = "Smelt Sword Blade"
 Requires = [ "Sword Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
 RequiredAmount = [ 0.1, 8.0, 0.1, 20.0, 1.0 ]
@@ -466,8 +469,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 128.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Hare Pelt x1
-Produces: Leather x1"
+hint_tooltip = "Requires: Sword Blade x1, Leather Strip x5
+Produces: Sword x1"
 text = "Hilt Sword"
 Requires = [ "Sword Blade", "Leather Strip" ]
 RequiredAmount = [ 1.0, 5.0 ]
@@ -483,8 +486,8 @@ script = ExtResource( 1 )
 
 [node name="Shear Sheep" parent="Middle Row/Thread" instance=ExtResource( 2 )]
 margin_right = 99.0
-hint_tooltip = "Requires: Clay x1
-Produces: Needle Mold x1"
+hint_tooltip = "Requires: Knife x1
+Produces: Wool x10"
 text = "Shear Sheep"
 Requires = [ "Knife" ]
 RequiredAmount = [ 1.0 ]
@@ -495,8 +498,8 @@ ProducedAmount = [ 10.0 ]
 margin_top = 26.0
 margin_right = 99.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Knife x1
-Produces: Wool x10"
+hint_tooltip = "Requires: Knife x0.1, Wood x1
+Produces: Spindle x1"
 text = "Make Spindle"
 Requires = [ "Knife", "Wood" ]
 RequiredAmount = [ 0.1, 1.0 ]
@@ -507,8 +510,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 99.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Knife x0.1, Wood x1
-Produces: Spindle x1"
+hint_tooltip = "Requires: Spindle x1, Wool x1
+Produces: Thread x1"
 text = "Spin Thread"
 Requires = [ "Spindle", "Wool" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -524,8 +527,8 @@ script = ExtResource( 1 )
 
 [node name="Form Needle Mold" parent="Middle Row/Needle" instance=ExtResource( 2 )]
 margin_right = 122.0
-hint_tooltip = "Requires: Clay x5
-Produces: Sword Mold x1"
+hint_tooltip = "Requires: Clay x1
+Produces: Needle Mold x1"
 text = "Form Needle Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 1.0 ]
@@ -536,8 +539,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 122.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Sword Mold x0.1, Iron Ingot x8, Forge x0.1, Charcoal x20, Fire x1
-Produces: Sword Blade x1"
+hint_tooltip = "Requires: Needle Mold x0.1, Iron Ingot x1, Forge x0.1, Charcoal x10, Fire x1
+Produces: Dull Needle x1"
 text = "Smelt Needle"
 Requires = [ "Needle Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
 RequiredAmount = [ 0.1, 1.0, 0.1, 10.0, 1.0 ]
@@ -548,8 +551,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 122.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Sword Blade x1, Leather Strip x5
-Produces: Sword x1"
+hint_tooltip = "Requires: Dull Needle x1, Stone x1
+Produces: Needle x1"
 text = "Sharpen Needle"
 Requires = [ "Dull Needle", "Stone" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -565,8 +568,8 @@ script = ExtResource( 1 )
 
 [node name="Form Knife Mold" parent="Middle Row/Knife" instance=ExtResource( 2 )]
 margin_right = 119.0
-hint_tooltip = "Requires: Clay x1
-Produces: Needle Mold x1"
+hint_tooltip = "Requires: Clay x3
+Produces: Knife Mold x1"
 text = "Form Knife Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 3.0 ]
@@ -577,8 +580,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 119.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Needle Mold x0.1, Iron Ingot x1, Forge x0.1, Charcoal x10, Fire x1
-Produces: Dull Needle x1"
+hint_tooltip = "Requires: Knife Mold x0.1, Iron Ingot x2, Forge x0.1, Charcoal x10, Fire x1
+Produces: Knife Blade x1"
 text = "Smelt Knife Blade"
 Requires = [ "Knife Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
 RequiredAmount = [ 0.1, 2.0, 0.1, 10.0, 1.0 ]
@@ -589,8 +592,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 119.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Dull Needle x1, Stone x1
-Produces: Needle x1"
+hint_tooltip = "Requires: Knife Blade x1, Wood x1, Stone x1, Sharp Stone x1
+Produces: Knife x1"
 text = "Construct Knife"
 Requires = [ "Knife Blade", "Wood", "Stone", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0, 1.0, 1.0 ]
@@ -605,8 +608,8 @@ script = ExtResource( 1 )
 
 [node name="Make Tree Tap" parent="Middle Row/Rubber" instance=ExtResource( 2 )]
 margin_right = 138.0
-hint_tooltip = "Requires: Clay x3
-Produces: Knife Mold x1"
+hint_tooltip = "Requires: Wood x1, Knife x0.1, Stone x1, Needle x1
+Produces: Tree Tap x1, Dull Needle x1"
 text = "Make Tree Tap"
 Requires = [ "Wood", "Knife", "Stone", "Needle" ]
 RequiredAmount = [ 1.0, 0.1, 1.0, 1.0 ]
@@ -617,8 +620,8 @@ ProducedAmount = [ 1.0, 1.0 ]
 margin_top = 26.0
 margin_right = 138.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Knife Mold x0.1, Iron Ingot x2, Forge x0.1, Charcoal x10, Fire x1
-Produces: Knife Blade x1"
+hint_tooltip = "Requires: Knife x0.1, Wood x1
+Produces: Wooden Bowl x1"
 text = "Make Wooden Bowl"
 Requires = [ "Knife", "Wood" ]
 RequiredAmount = [ 0.1, 1.0 ]
@@ -629,8 +632,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 138.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Knife Blade x1, Wood x1, Stone x1, Sharp Stone x1
-Produces: Knife x1"
+hint_tooltip = "Requires: Basket x0.1
+Produces: Morning Glory x40"
 text = "Gather Morning Glory"
 Requires = [ "Basket" ]
 RequiredAmount = [ 0.1 ]
@@ -641,8 +644,8 @@ ProducedAmount = [ 40.0 ]
 margin_top = 78.0
 margin_right = 138.0
 margin_bottom = 100.0
-hint_tooltip = "Requires: Basket x0.1
-Produces: Morning Glory x40"
+hint_tooltip = "Requires: Morning Glory x10, Wooden Bowl x1
+Produces: Morning Glory Juice x1"
 text = "Juice Morning Glory"
 Requires = [ "Morning Glory", "Wooden Bowl" ]
 RequiredAmount = [ 10.0, 1.0 ]
@@ -653,8 +656,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 104.0
 margin_right = 138.0
 margin_bottom = 126.0
-hint_tooltip = "Requires: Knife Blade x1, Wood x1, Stone x1, Sharp Stone x1
-Produces: Knife x1"
+hint_tooltip = "Requires: Knife x0.1, Tree Tap x0.2, Stone x1, Wooden Bowl x1
+Produces: Rubber Sap x1"
 text = "Tap Rubber Tree"
 Requires = [ "Knife", "Tree Tap", "Stone", "Wooden Bowl" ]
 RequiredAmount = [ 0.1, 0.2, 1.0, 1.0 ]
@@ -665,8 +668,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 130.0
 margin_right = 138.0
 margin_bottom = 152.0
-hint_tooltip = "Requires: Knife x1, Tree Tap x1, Stone x1, Bowl x1
-Produces: Rubber Sap x1"
+hint_tooltip = "Requires: Rubber Sap x1, Morning Glory Juice x1
+Produces: Rubber x1"
 text = "Mix Rubber"
 Requires = [ "Rubber Sap", "Morning Glory Juice" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -682,8 +685,8 @@ script = ExtResource( 1 )
 
 [node name="Form Anvil Head Mold" parent="Middle Row/Anvil" instance=ExtResource( 2 )]
 margin_right = 140.0
-hint_tooltip = "Requires: Hare Pelt x40, Needle x1, Thread x2, Knife x0.5
-Produces: Cloak x1, Dull Needle x1"
+hint_tooltip = "Requires: Clay x25
+Produces: Anvil Head Mold x1"
 text = "Form Anvil Head Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 25.0 ]
@@ -694,8 +697,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 140.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Clay x25
-Produces: Anvil Head Mold x1"
+hint_tooltip = "Requires: Anvil Head Mold x1, Iron Ingot x20, Forge x0.1, Fire x1, Charcoal x80
+Produces: Anvil Head x1"
 text = "Smelt Anvil Head"
 Requires = [ "Anvil Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
 RequiredAmount = [ 1.0, 20.0, 0.1, 1.0, 80.0 ]
@@ -706,8 +709,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 140.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Anvil Head Mold x1, Iron Ingot x20, Forge x0.1, Fire x1, Charcoal x80
-Produces: Anvil Head x1"
+hint_tooltip = "Requires: Wood x1, Knife x1, Hammer x0.1
+Produces: Anvil Base x1"
 text = "Carve Anvil Base"
 Requires = [ "Wood", "Knife", "Hammer" ]
 RequiredAmount = [ 1.0, 1.0, 0.1 ]
@@ -718,8 +721,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 78.0
 margin_right = 140.0
 margin_bottom = 100.0
-hint_tooltip = "Requires: Wood x1, Knife x1, Hammer x0.1
-Produces: Anvil Base x1"
+hint_tooltip = "Requires: Anvil Head x1, Anvil Base x1
+Produces: Anvil x1"
 text = "Assemble Anvil"
 Requires = [ "Anvil Head", "Anvil Base" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -735,8 +738,8 @@ script = ExtResource( 1 )
 
 [node name="Form Hammer Head Mold" parent="Middle Row/Hammer" instance=ExtResource( 2 )]
 margin_right = 155.0
-hint_tooltip = "Requires: Anvil Head x1, Anvil Base x1
-Produces: Anvil x1"
+hint_tooltip = "Requires: Clay x1
+Produces: Hammer Head Mold x1"
 text = "Form Hammer Head Mold"
 Requires = [ "Clay" ]
 RequiredAmount = [ 1.0 ]
@@ -747,8 +750,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 155.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Anvil Head Mold x1, Iron Ingot x20, Forge x0.1, Fire x1, Charcoal x80
-Produces: Anvil Head x1"
+hint_tooltip = "Requires: Hammer Head Mold x0.1, Iron Ingot x3, Forge x0.1, Fire x1, Charcoal x10
+Produces: Hammer Head x1"
 text = "Smelt Hammer Head"
 Requires = [ "Hammer Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
 RequiredAmount = [ 0.1, 3.0, 0.1, 1.0, 10.0 ]
@@ -759,8 +762,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 155.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Hammer Head Mold x0.1, Iron Ingot x3, Forge x0.1, Fire x1, Charcoal x10
-Produces: Hammer Head x1"
+hint_tooltip = "Requires: Hammer Head x1, Wood Handle x1
+Produces: Hammer x1"
 text = "Construct Hammer"
 Requires = [ "Hammer Head", "Wood Handle" ]
 RequiredAmount = [ 1.0, 1.0 ]
@@ -775,8 +778,8 @@ script = ExtResource( 1 )
 
 [node name="Make Iron Rivet" parent="Middle Row/Helm" instance=ExtResource( 2 )]
 margin_right = 119.0
-hint_tooltip = "Requires: Hammer Head x1, Wood Handle x1
-Produces: Hammer x1"
+hint_tooltip = "Requires: Dull Needle x1, Hammer x0.1
+Produces: Iron Rivet x1"
 text = "Make Iron Rivet"
 Requires = [ "Dull Needle", "Hammer" ]
 RequiredAmount = [ 1.0, 0.1 ]
@@ -787,8 +790,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 119.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Dull Needle x1, Hammer x0.1
-Produces: Iron Rivet x1"
+hint_tooltip = "Requires: Iron Ingot x2, Forge x0.1, Fire x1, Charcoal x10, Hammer x0.1, Anvil x0.1
+Produces: Iron Sheet x1"
 text = "Make Iron Sheet"
 Requires = [ "Iron Ingot", "Forge", "Fire", "Charcoal", "Hammer", "Anvil" ]
 RequiredAmount = [ 2.0, 0.1, 1.0, 10.0, 0.1, 0.1 ]
@@ -799,8 +802,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 119.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Iron Ingot x2, Forge x0.1, Fire x1, Charcoal x10, Hammer x0.1, Anvil x0.1
-Produces: Iron Sheet x1"
+hint_tooltip = "Requires: Iron Sheet x3, Iron Rivet x20, Leather Strip x7, Knife x0.2, Thread x0.5, Needle x1, Hammer x0.1, Anvil x0.1
+Produces: Iron Helm x1, Dull Needle x1"
 text = "Make Iron Helm"
 Requires = [ "Iron Sheet", "Iron Rivet", "Leather Strip", "Knife", "Thread", "Needle", "Hammer", "Anvil" ]
 RequiredAmount = [ 3.0, 20.0, 7.0, 0.2, 0.5, 1.0, 0.1, 0.1 ]
@@ -808,7 +811,6 @@ Produces = [ "Iron Helm", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Mountains" type="VBoxContainer" parent="Middle Row"]
-editor/display_folded = true
 margin_left = 1052.0
 margin_right = 1175.0
 margin_bottom = 152.0
@@ -816,8 +818,8 @@ script = ExtResource( 1 )
 
 [node name="Make Boots" parent="Middle Row/Mountains" instance=ExtResource( 2 )]
 margin_right = 123.0
-hint_tooltip = "Requires: Rubber Sap x1, Morning Glory Juice x1
-Produces: Rubber x1"
+hint_tooltip = "Requires: Leather x4, Knife x0.1, Needle x1, Thread x1, Rubber x3, Leather Strip x4
+Produces: Boots x2, Dull Needle x1"
 text = "Make Boots"
 Requires = [ "Leather", "Knife", "Needle", "Thread", "Rubber", "Leather Strip" ]
 RequiredAmount = [ 4.0, 0.1, 1.0, 1.0, 3.0, 4.0 ]
@@ -828,8 +830,8 @@ ProducedAmount = [ 2.0, 1.0 ]
 margin_top = 26.0
 margin_right = 123.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Leather x4, Knife x0.1, Needle x1, Thread x1, Rubber x3, Leather Strip x4
-Produces: Boots x2, Dull Needle x1"
+hint_tooltip = "Requires: Hare Pelt x40, Needle x1, Thread x2, Knife x0.5
+Produces: Cloak x1, Dull Needle x1"
 text = "Make Cloak"
 Requires = [ "Hare Pelt", "Needle", "Thread", "Knife" ]
 RequiredAmount = [ 40.0, 1.0, 2.0, 0.5 ]
@@ -840,8 +842,8 @@ ProducedAmount = [ 1.0, 1.0 ]
 margin_top = 52.0
 margin_right = 123.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Iron Sheet x3, Iron Rivet x20, Leather Strips x7, Knife x0.2, Thread x0.5, Needle x1, Hammer x0.1, Anvil x0.1
-Produces: Iron Helm x1, Dull Needle x1"
+hint_tooltip = "Requires: Sword x0.1, Cloak x0.1, Boots x0.2
+Produces: Discovered Cave x1"
 text = "Explore Mountains"
 Requires = [ "Sword", "Cloak", "Boots" ]
 RequiredAmount = [ 0.1, 0.1, 0.2 ]
@@ -861,8 +863,8 @@ script = ExtResource( 1 )
 
 [node name="Craft Leather Armor" parent="Final Row/Misc" instance=ExtResource( 2 )]
 margin_right = 146.0
-hint_tooltip = "Requires: Discovered Cave x7, Sword x1, Iron Helm x0.2, Leather Armor x0.5, Boots x1
-Produces: Red Dragon Tooth x48"
+hint_tooltip = "Requires: Leather x20, Leather Strip x10, Knife x1, Needle x1, Thread x1
+Produces: Leather Armor x1, Dull Needle x1"
 text = "Craft Leather Armor"
 Requires = [ "Leather", "Leather Strip", "Knife", "Needle", "Thread" ]
 RequiredAmount = [ 20.0, 10.0, 1.0, 1.0, 1.0 ]
@@ -873,8 +875,8 @@ ProducedAmount = [ 1.0, 1.0 ]
 margin_top = 26.0
 margin_right = 146.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Sword x0.1, Cloak x0.1, Boots x0.2
-Produces: Discovered Cave x1"
+hint_tooltip = "Requires: Discovered Cave x7, Sword x1, Iron Helm x0.2, Leather Armor x0.5, Boots x1
+Produces: Red Dragon Tooth x48"
 text = "Slay Red Dragon"
 Requires = [ "Discovered Cave", "Sword", "Iron Helm", "Leather Armor", "Boots" ]
 RequiredAmount = [ 7.0, 1.0, 0.2, 0.5, 1.0 ]
@@ -885,8 +887,8 @@ ProducedAmount = [ 48.0 ]
 margin_top = 52.0
 margin_right = 146.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Leather x20, Leather Strip x10, Knife x1, Needle x1, Thread x1
-Produces: Leather Armor x1, Dull Needle x1"
+hint_tooltip = "Requires: Red Dragon Tooth x50, Leather Armor x1, Knife x1, Leather Strip x10, Needle x20, Thread x2, Fire x10, Charcoal x200, Forge x1
+Produces: Fireproof Armor x1"
 text = "Forge Fireproof Armor"
 Requires = [ "Red Dragon Tooth", "Leather Armor", "Knife", "Leather Strip", "Needle", "Thread", "Fire", "Charcoal", "Forge" ]
 RequiredAmount = [ 50.0, 1.0, 1.0, 10.0, 20.0, 2.0, 10.0, 200.0, 1.0 ]
@@ -901,8 +903,8 @@ script = ExtResource( 1 )
 
 [node name="Defeat the Wizard" parent="Final Row/Final Battle" instance=ExtResource( 2 )]
 margin_right = 126.0
-hint_tooltip = "Requires: Defeated Wizard x1
-Produces: Princess x1"
+hint_tooltip = "Requires: Fireproof Armor x1, Waterproof Helm x1, Hexproof Shield x1, Magic Sword x1
+Produces: Defeated Wizard x1"
 text = "Defeat the Wizard"
 Requires = [ "Fireproof Armor", "Waterproof Helm", "Hexproof Shield", "Magic Sword" ]
 RequiredAmount = [ 1.0, 1.0, 1.0, 1.0 ]
@@ -913,8 +915,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 126.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Clay x2
-Produces: Pickaxe Head Mold x1"
+hint_tooltip = "Requires: Defeated Wizard x1
+Produces: Princess x1"
 text = "Save the Princess"
 Requires = [ "Defeated Wizard" ]
 RequiredAmount = [ 1.0 ]
