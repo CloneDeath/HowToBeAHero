@@ -26,8 +26,6 @@ margin_right = 107.0
 hint_tooltip = "Requires: Nothing
 Produces: Stone x1"
 text = "Gather Stone"
-Requires = [  ]
-RequiredAmount = [  ]
 Produces = [ "Stone" ]
 ProducedAmount = [ 1 ]
 
@@ -67,8 +65,6 @@ margin_right = 157.0
 hint_tooltip = "Requires: Nothing
 Produces: Frond x1"
 text = "Gather Fronds"
-Requires = [  ]
-RequiredAmount = [  ]
 Produces = [ "Frond" ]
 ProducedAmount = [ 1 ]
 
@@ -868,8 +864,8 @@ ProducedAmount = [ 1.0, 1.0 ]
 margin_top = 26.0
 margin_right = 138.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Red Dragon Tooth x50, Leather Armor x1, Knife x1, Leather Strip x10, Needle x20, Thread x2, Fire x10, Charcoal x200, Forge x1
-Produces: Fireproof Armor x1"
+hint_tooltip = "Requires: Rubber x2, Leather x2, Knife x0.1, Needle x1, Thread x0.2
+Produces: Waterskin x1, Dull Needle x1"
 text = "Craft Waterskin"
 Requires = [ "Rubber", "Leather", "Knife", "Needle", "Thread" ]
 RequiredAmount = [ 2.0, 2.0, 0.1, 1.0, 0.2 ]
@@ -880,8 +876,8 @@ ProducedAmount = [ 1.0, 1.0 ]
 margin_top = 52.0
 margin_right = 138.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Discovered Ruins x12, Hare x50, Morning Glory x100
-Produces: Green Dragon Scale x1"
+hint_tooltip = "Requires: Wood Handle x1, Coal x1, Fire x1
+Produces: Torch x1"
 text = "Torch"
 Requires = [ "Wood Handle", "Coal", "Fire" ]
 RequiredAmount = [ 1.0, 1.0, 1.0 ]
@@ -892,8 +888,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 78.0
 margin_right = 138.0
 margin_bottom = 100.0
-hint_tooltip = "Requires: Discovered Lake x8, Spear x10, Knife x1, Leather Armor x1, Boots x2
-Produces: Blue Dragon Gills x2"
+hint_tooltip = "Requires: Knife x0.1, Leather x2, Leather Strip x3, Needle x1, Thread x0.5
+Produces: Leather Mask x1, Dull Needle x1"
 text = "Craft Leather Mask"
 Requires = [ "Knife", "Leather", "Leather Strip", "Needle", "Thread" ]
 RequiredAmount = [ 0.1, 2.0, 3.0, 1.0, 0.5 ]
@@ -925,8 +921,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 186.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Waterskin x0.1, Boots x0.2
-Produces: Discovered Ruins x1"
+hint_tooltip = "Requires: Discovered Cave x12, Hare x50, Morning Glory x100
+Produces: Green Dragon Scale x1"
 text = "Make Offering to Green Dragon"
 Requires = [ "Discovered Cave", "Hare", "Morning Glory" ]
 RequiredAmount = [ 12.0, 50.0, 100.0 ]
@@ -937,8 +933,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 52.0
 margin_right = 186.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Knife x0.1, Leather x2, Leather Strips x3, Needle x1, Thread x0.5
-Produces: Leather Mask x1, Dull Needle x1"
+hint_tooltip = "Requires: Green Dragon Scale x1, Leather Strip x4, Knife x0.1, Needle x1, Thread x0.5
+Produces: Hexproof Shield x1, Dull Needle x1"
 text = "Construct Hexproof Shield"
 Requires = [ "Green Dragon Scale", "Leather Strip", "Knife", "Needle", "Thread" ]
 RequiredAmount = [ 1.0, 4.0, 0.1, 1.0, 0.5 ]
@@ -946,6 +942,7 @@ Produces = [ "Hexproof Shield", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Blue Dragon" type="VBoxContainer" parent="Final Row"]
+editor/display_folded = true
 margin_left = 190.0
 margin_right = 346.0
 margin_bottom = 74.0
@@ -953,8 +950,8 @@ script = ExtResource( 1 )
 
 [node name="Explore Forest" parent="Final Row/Blue Dragon" instance=ExtResource( 2 )]
 margin_right = 156.0
-hint_tooltip = "Requires: Wood Handle x1, Coal x1, Fire x1
-Produces: Torch x1"
+hint_tooltip = "Requires: Sword x0.1, Leather Armor x0.1, Boots x0.2, Torch x1
+Produces: Discovered Lake x1"
 text = "Explore Forest"
 Requires = [ "Sword", "Leather Armor", "Boots", "Torch" ]
 RequiredAmount = [ 0.1, 0.1, 0.2, 1.0 ]
@@ -965,8 +962,8 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 156.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Sword x0.1, Leather Armor x0.1, Boots x0.2, Torch x1
-Produces: Discovered Lake x1"
+hint_tooltip = "Requires: Discovered Lake x8, Spear x10, Knife x1, Leather Armor x1, Boots x2
+Produces: Blue Dragon Gills x12"
 text = "Slay Blue Dragon"
 Requires = [ "Discovered Lake", "Spear", "Knife", "Leather Armor", "Boots" ]
 RequiredAmount = [ 8.0, 10.0, 1.0, 1.0, 2.0 ]
@@ -977,8 +974,8 @@ ProducedAmount = [ 12.0 ]
 margin_top = 52.0
 margin_right = 156.0
 margin_bottom = 74.0
-hint_tooltip = "Requires: Green Dragon Scale x1, Leather Strip x4, Knife x0.1, Needle x1, Thread x0.5
-Produces: Hexproof Shield x1, Dull Needle x1"
+hint_tooltip = "Requires: Blue Dragon Gills x6, Leather Mask x1, Iron Helm x1, Leather Strips x6, Needle x1, Thread x1, Charcoal x3, Rubber x2
+Produces: Helm of Water Breathing x1, Dull Needle x1"
 text = "Helm of Water Breathing"
 Requires = [ "Blue Dragon Gills", "Leather Mask", "Iron Helm", "Leather Strips", "Needle", "Thread", "Charcoal", "Rubber" ]
 RequiredAmount = [ 6.0, 1.0, 1.0, 6.0, 1.0, 1.0, 3.0, 2.0 ]
@@ -993,8 +990,8 @@ script = ExtResource( 1 )
 
 [node name="Explore Desert" parent="Final Row/Red Dragon" instance=ExtResource( 2 )]
 margin_right = 146.0
-hint_tooltip = "Requires: Rubber x50, Leather x1, Knife x1, Needle x10, Thread x20
-Produces: Fireproof Armor x1"
+hint_tooltip = "Requires: Waterskin x0.1, Boots x0.2
+Produces: Discovered Ruins x1"
 text = "Explore Desert"
 Requires = [ "Waterskin", "Boots" ]
 RequiredAmount = [ 0.1, 0.2 ]
@@ -1005,7 +1002,7 @@ ProducedAmount = [ 1.0 ]
 margin_top = 26.0
 margin_right = 146.0
 margin_bottom = 48.0
-hint_tooltip = "Requires: Discovered Cave x7, Sword x1, Iron Helm x0.2, Leather Armor x0.5, Boots x1
+hint_tooltip = "Requires: Discovered Ruins x7, Sword x1, Iron Helm x0.2, Leather Armor x0.5, Boots x1
 Produces: Red Dragon Tooth x48"
 text = "Slay Red Dragon"
 Requires = [ "Discovered Ruins", "Sword", "Iron Helm", "Leather Armor", "Boots" ]

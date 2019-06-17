@@ -19,3 +19,11 @@ func take_resource(resource, amount):
 func give_resource(resource, amount):
 	for child in get_children():
 		child.give_resource(resource, amount);
+
+func clear_requirements():
+	for child in get_children():
+		child.clear_requirements();
+
+func add_requirement(resource, amount):
+	for child in get_children():
+		child.add_requirement(resource, amount);

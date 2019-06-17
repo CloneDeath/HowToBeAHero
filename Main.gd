@@ -1,5 +1,7 @@
 extends Control
 
+var _current_action = null;
+
 func _on_action_pressed(input, input_count, output, output_count):
 	if (has_resources(input, input_count)):
 		take_resources(input, input_count);
@@ -38,3 +40,15 @@ func resources_are_visible(input):
 
 func _process(_delta):
 	$VBoxContainer/Actions.check_resources(self);
+
+func _on_action_focused(action):
+	_current_action = action;
+	$VBoxContainer/Resources.clear_requirements();
+	for i in range(action.Requires.size()):
+		var resource = action.Requires[i];
+		var amount = action.RequiredAmount[i];
+		$VBoxContainer/Resources.add_requirement(resource, amount);
+
+func _on_action_focus_lost(action):
+	if (_current_action == action):
+		$VBoxContainer/Resources.clear_requirements();

@@ -2,6 +2,8 @@ extends Button
 tool
 
 signal action_pressed(input, input_count, output, output_count);
+signal action_focused(action);
+signal action_focus_lost(action);
 
 export(Array, String) var Requires = [];
 export(Array, float) var RequiredAmount = [];
@@ -13,6 +15,8 @@ func _ready():
 	if (!Engine.editor_hint):
 		self.visible = false;
 	self.hint_tooltip = get_details();
+	self.connect("mouse_entered", self, "_mouse_entered");
+	self.connect("mouse_exited", self, "_mouse_exited");
 
 func get_details():
 	return str("Requires: ", get_requirements(),
@@ -52,3 +56,9 @@ func check_resources(resources):
 	self.disabled = !has_resources;
 	if (resources.resources_are_visible(Requires)):
 		self.visible = true;
+
+func _mouse_entered():
+	emit_signal("action_focused", self);
+
+func _mouse_exited():
+	emit_signal("action_focus_lost", self);
