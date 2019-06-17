@@ -623,6 +623,7 @@ margin_bottom = 188.0
 ResourceTexture = ExtResource( 60 )
 
 [node name="Misc" type="VBoxContainer" parent="Second Row"]
+editor/display_folded = true
 margin_left = 55.0
 margin_right = 124.0
 margin_bottom = 188.0
@@ -650,9 +651,11 @@ margin_bottom = 188.0
 ResourceTexture = ExtResource( 63 )
 
 [node name="Misc2" type="VBoxContainer" parent="Second Row"]
+editor/display_folded = true
 margin_left = 128.0
 margin_right = 193.0
 margin_bottom = 188.0
+script = ExtResource( 1 )
 
 [node name="Torch" parent="Second Row/Misc2" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -672,6 +675,7 @@ editor/display_folded = true
 margin_left = 197.0
 margin_right = 289.0
 margin_bottom = 188.0
+script = ExtResource( 1 )
 
 [node name="Discovered Ruins" parent="Second Row/Green Dragon" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -727,6 +731,7 @@ editor/display_folded = true
 margin_left = 408.0
 margin_right = 491.0
 margin_bottom = 188.0
+script = ExtResource( 1 )
 
 [node name="Discovered Cave" parent="Second Row/Red Dragon" instance=ExtResource( 2 )]
 editor/display_folded = true
