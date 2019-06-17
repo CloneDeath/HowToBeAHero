@@ -48,7 +48,14 @@ func _on_action_focused(action):
 		var resource = action.Requires[i];
 		var amount = action.RequiredAmount[i];
 		$VBoxContainer/Resources.add_requirement(resource, amount);
+	
+	$VBoxContainer/Resources.clear_products();
+	for i in range(action.Produces.size()):
+		var resource = action.Produces[i];
+		var amount = action.ProducedAmount[i];
+		$VBoxContainer/Resources.add_product(resource, amount);
 
 func _on_action_focus_lost(action):
 	if (_current_action == action):
 		$VBoxContainer/Resources.clear_requirements();
+		$VBoxContainer/Resources.clear_products();

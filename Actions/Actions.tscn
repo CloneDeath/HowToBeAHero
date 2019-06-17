@@ -10,7 +10,6 @@ custom_constants/separation = 25
 script = ExtResource( 1 )
 
 [node name="Top Row" type="HBoxContainer" parent="."]
-editor/display_folded = true
 margin_right = 1287.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
@@ -81,7 +80,6 @@ Produces = [ "Leaf" ]
 ProducedAmount = [ 12 ]
 
 [node name="Basket" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
 margin_left = 272.0
 margin_right = 396.0
 margin_bottom = 100.0
@@ -129,12 +127,11 @@ hint_tooltip = "Requires: Leaf Bundle x10, Cane Strip x30, Frond x10
 Produces: Basket x1"
 text = "Make Basket"
 Requires = [ "Leaf Bundle", "Cane Strip", "Frond" ]
-RequiredAmount = [ 10, 30, 10 ]
+RequiredAmount = [ 5, 15, 5 ]
 Produces = [ "Basket" ]
 ProducedAmount = [ 1 ]
 
 [node name="Wood" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
 margin_left = 400.0
 margin_right = 508.0
 margin_bottom = 100.0
@@ -160,7 +157,7 @@ text = "Start Fire"
 Requires = [ "Wood" ]
 RequiredAmount = [ 1 ]
 Produces = [ "Fire" ]
-ProducedAmount = [ 1 ]
+ProducedAmount = [ 10 ]
 
 [node name="Make Charcoal" parent="Top Row/Wood" instance=ExtResource( 2 )]
 margin_top = 52.0
@@ -298,7 +295,6 @@ Produces = [ "Iron Ingot" ]
 ProducedAmount = [ 10.0 ]
 
 [node name="Pickaxe" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
 margin_left = 880.0
 margin_right = 1032.0
 margin_bottom = 100.0
@@ -347,11 +343,10 @@ Produces: Iron Ore x6, Stone x24"
 text = "Mine Iron Ore"
 Requires = [ "Pickaxe" ]
 RequiredAmount = [ 0.1 ]
-Produces = [ "Iron Ore", "Stone" ]
-ProducedAmount = [ 6.0, 24.0 ]
+Produces = [ "Iron Ore", "Stone", "Sharp Stone", "Crushed Stone" ]
+ProducedAmount = [ 6.0, 24.0, 6.0, 2.0 ]
 
 [node name="Spear" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
 margin_left = 1036.0
 margin_right = 1162.0
 margin_bottom = 100.0
@@ -379,15 +374,10 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Spear" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Leather" type="VBoxContainer" parent="Top Row"]
-editor/display_folded = true
-margin_left = 1166.0
-margin_right = 1271.0
-margin_bottom = 100.0
-script = ExtResource( 1 )
-
-[node name="Hunt Hare" parent="Top Row/Leather" instance=ExtResource( 2 )]
-margin_right = 105.0
+[node name="Hunt Hare" parent="Top Row/Spear" instance=ExtResource( 2 )]
+margin_top = 52.0
+margin_right = 126.0
+margin_bottom = 74.0
 hint_tooltip = "Requires: Spear x0.1
 Produces: Hare x1"
 text = "Hunt Hare"
@@ -396,33 +386,61 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Hare" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Flay Hare" parent="Top Row/Leather" instance=ExtResource( 2 )]
-margin_top = 26.0
-margin_right = 105.0
-margin_bottom = 48.0
+[node name="Flay Hare" parent="Top Row/Spear" instance=ExtResource( 2 )]
+margin_top = 78.0
+margin_right = 126.0
+margin_bottom = 100.0
 hint_tooltip = "Requires: Hare x1, Sharp Stone x1
 Produces: Hare Pelt x1"
 text = "Flay Hare"
 Requires = [ "Hare", "Sharp Stone" ]
 RequiredAmount = [ 1.0, 1.0 ]
-Produces = [ "Hare Pelt" ]
+Produces = [ "Pelt" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Tan Hare Pelt" parent="Top Row/Leather" instance=ExtResource( 2 )]
+[node name="Leather" type="VBoxContainer" parent="Top Row"]
+margin_left = 1166.0
+margin_right = 1269.0
+margin_bottom = 100.0
+script = ExtResource( 1 )
+
+[node name="Hunt Bear" parent="Top Row/Leather" instance=ExtResource( 2 )]
+margin_right = 103.0
+hint_tooltip = "Requires: Spear x0.1
+Produces: Hare x1"
+text = "Hunt Bear"
+Requires = [ "Sword", "Discovered Cave" ]
+RequiredAmount = [ 0.1, 0.1 ]
+Produces = [ "Bear" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Flay Bear" parent="Top Row/Leather" instance=ExtResource( 2 )]
+margin_top = 26.0
+margin_right = 103.0
+margin_bottom = 48.0
+hint_tooltip = "Requires: Hare x1, Sharp Stone x1
+Produces: Pelt x1"
+text = "Flay Bear"
+Requires = [ "Bear", "Knife" ]
+RequiredAmount = [ 1.0, 0.1 ]
+Produces = [ "Pelt" ]
+ProducedAmount = [ 16.0 ]
+
+[node name="Tan Pelt" parent="Top Row/Leather" instance=ExtResource( 2 )]
 margin_top = 52.0
-margin_right = 105.0
+margin_right = 103.0
 margin_bottom = 74.0
 hint_tooltip = "Requires: Hare Pelt x1
 Produces: Leather x1"
-text = "Tan Hare Pelt"
-Requires = [ "Hare Pelt" ]
+text = "Tan Pelt"
+Requires = [ "Pelt" ]
 RequiredAmount = [ 1.0 ]
 Produces = [ "Leather" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Strip Leather" parent="Top Row/Leather" instance=ExtResource( 2 )]
 margin_top = 78.0
-margin_right = 105.0
+margin_right = 103.0
 margin_bottom = 100.0
 hint_tooltip = "Requires: Leather x1, Knife x0.1
 Produces: Leather Strip x4"
@@ -433,7 +451,6 @@ Produces = [ "Leather Strip" ]
 ProducedAmount = [ 4.0 ]
 
 [node name="Middle Row" type="HBoxContainer" parent="."]
-editor/display_folded = true
 margin_top = 125.0
 margin_right = 1287.0
 margin_bottom = 277.0
@@ -521,7 +538,6 @@ Produces = [ "Thread" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Needle" type="VBoxContainer" parent="Middle Row"]
-editor/display_folded = true
 margin_left = 235.0
 margin_right = 357.0
 margin_bottom = 152.0
@@ -547,7 +563,7 @@ text = "Smelt Needle"
 Requires = [ "Needle Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
 RequiredAmount = [ 0.1, 1.0, 0.1, 10.0, 1.0 ]
 Produces = [ "Dull Needle" ]
-ProducedAmount = [ 1.0 ]
+ProducedAmount = [ 12.0 ]
 
 [node name="Sharpen Needle" parent="Middle Row/Needle" instance=ExtResource( 2 )]
 margin_top = 52.0
@@ -603,7 +619,6 @@ Produces = [ "Knife" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Rubber" type="VBoxContainer" parent="Middle Row"]
-editor/display_folded = true
 margin_left = 484.0
 margin_right = 622.0
 margin_bottom = 152.0
@@ -676,8 +691,8 @@ Produces: Rubber x1"
 text = "Mix Rubber"
 Requires = [ "Rubber Sap", "Morning Glory Juice" ]
 RequiredAmount = [ 1.0, 1.0 ]
-Produces = [ "Rubber" ]
-ProducedAmount = [ 1.0 ]
+Produces = [ "Rubber", "Wooden Bowl" ]
+ProducedAmount = [ 1.0, 2.0 ]
 
 [node name="Anvil" type="VBoxContainer" parent="Middle Row"]
 editor/display_folded = true
@@ -838,13 +853,12 @@ margin_bottom = 48.0
 hint_tooltip = "Requires: Hare Pelt x40, Needle x1, Thread x2, Knife x0.5
 Produces: Cloak x1, Dull Needle x1"
 text = "Make Cloak"
-Requires = [ "Hare Pelt", "Needle", "Thread", "Knife" ]
+Requires = [ "Pelt", "Needle", "Thread", "Knife" ]
 RequiredAmount = [ 40.0, 1.0, 2.0, 0.5 ]
 Produces = [ "Cloak", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Misc" type="VBoxContainer" parent="Middle Row"]
-editor/display_folded = true
 margin_left = 1149.0
 margin_right = 1287.0
 margin_bottom = 152.0
@@ -879,7 +893,7 @@ margin_bottom = 74.0
 hint_tooltip = "Requires: Wood Handle x1, Coal x1, Fire x1
 Produces: Torch x1"
 text = "Torch"
-Requires = [ "Wood Handle", "Coal", "Fire" ]
+Requires = [ "Wood Handle", "Charcoal", "Fire" ]
 RequiredAmount = [ 1.0, 1.0, 1.0 ]
 Produces = [ "Torch" ]
 ProducedAmount = [ 1.0 ]
@@ -942,14 +956,13 @@ Produces = [ "Hexproof Shield", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Blue Dragon" type="VBoxContainer" parent="Final Row"]
-editor/display_folded = true
 margin_left = 190.0
-margin_right = 346.0
+margin_right = 340.0
 margin_bottom = 74.0
 script = ExtResource( 1 )
 
 [node name="Explore Forest" parent="Final Row/Blue Dragon" instance=ExtResource( 2 )]
-margin_right = 156.0
+margin_right = 150.0
 hint_tooltip = "Requires: Sword x0.1, Leather Armor x0.1, Boots x0.2, Torch x1
 Produces: Discovered Lake x1"
 text = "Explore Forest"
@@ -960,7 +973,7 @@ ProducedAmount = [ 1.0 ]
 
 [node name="Slay Blue Dragon" parent="Final Row/Blue Dragon" instance=ExtResource( 2 )]
 margin_top = 26.0
-margin_right = 156.0
+margin_right = 150.0
 margin_bottom = 48.0
 hint_tooltip = "Requires: Discovered Lake x8, Spear x10, Knife x1, Leather Armor x1, Boots x2
 Produces: Blue Dragon Gills x12"
@@ -970,21 +983,21 @@ RequiredAmount = [ 8.0, 10.0, 1.0, 1.0, 2.0 ]
 Produces = [ "Blue Dragon Gills" ]
 ProducedAmount = [ 12.0 ]
 
-[node name="Helm of Water Breathing" parent="Final Row/Blue Dragon" instance=ExtResource( 2 )]
+[node name="Helm of Waterbreathing" parent="Final Row/Blue Dragon" instance=ExtResource( 2 )]
 margin_top = 52.0
-margin_right = 156.0
+margin_right = 150.0
 margin_bottom = 74.0
 hint_tooltip = "Requires: Blue Dragon Gills x6, Leather Mask x1, Iron Helm x1, Leather Strips x6, Needle x1, Thread x1, Charcoal x3, Rubber x2
 Produces: Helm of Water Breathing x1, Dull Needle x1"
-text = "Helm of Water Breathing"
-Requires = [ "Blue Dragon Gills", "Leather Mask", "Iron Helm", "Leather Strips", "Needle", "Thread", "Charcoal", "Rubber" ]
+text = "Helm of Waterbreathing"
+Requires = [ "Blue Dragon Gills", "Leather Mask", "Iron Helm", "Leather Strip", "Needle", "Thread", "Charcoal", "Rubber" ]
 RequiredAmount = [ 6.0, 1.0, 1.0, 6.0, 1.0, 1.0, 3.0, 2.0 ]
-Produces = [ "Helm of Water Breathing", "Dull Needle" ]
+Produces = [ "Helm of Waterbreathing", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Red Dragon" type="VBoxContainer" parent="Final Row"]
-margin_left = 350.0
-margin_right = 496.0
+margin_left = 344.0
+margin_right = 490.0
 margin_bottom = 74.0
 script = ExtResource( 1 )
 
@@ -1023,9 +1036,8 @@ Produces = [ "Fireproof Armor" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Final Battle" type="VBoxContainer" parent="Final Row"]
-editor/display_folded = true
-margin_left = 500.0
-margin_right = 626.0
+margin_left = 494.0
+margin_right = 620.0
 margin_bottom = 74.0
 script = ExtResource( 1 )
 
@@ -1034,8 +1046,8 @@ margin_right = 126.0
 hint_tooltip = "Requires: Fireproof Armor x1, Waterproof Helm x1, Hexproof Shield x1, Magic Sword x1
 Produces: Defeated Wizard x1"
 text = "Defeat the Wizard"
-Requires = [ "Fireproof Armor", "Waterproof Helm", "Hexproof Shield", "Magic Sword" ]
-RequiredAmount = [ 1.0, 1.0, 1.0, 1.0 ]
+Requires = [ "Hexproof Shield", "Helm of Waterbreathing", "Fireproof Armor" ]
+RequiredAmount = [ 1.0, 1.0, 1.0 ]
 Produces = [ "Defeated Wizard" ]
 ProducedAmount = [ 1.0 ]
 

@@ -27,3 +27,11 @@ func clear_requirements():
 func add_requirement(resource, amount):
 	for child in get_children():
 		child.add_requirement(resource, amount);
+		
+func clear_products():
+	for child in get_children():
+		child.clear_products();
+
+func add_product(resource, amount):
+	for child in get_children():
+		child.add_product(resource, amount);
