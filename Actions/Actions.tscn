@@ -907,19 +907,18 @@ margin_bottom = 376.0
 script = ExtResource( 1 )
 
 [node name="Green Dragon" type="VBoxContainer" parent="Final Row"]
-editor/display_folded = true
 margin_right = 186.0
 margin_bottom = 74.0
 script = ExtResource( 1 )
 
-[node name="Explore Desert" parent="Final Row/Green Dragon" instance=ExtResource( 2 )]
+[node name="Explore Mountains" parent="Final Row/Green Dragon" instance=ExtResource( 2 )]
 margin_right = 186.0
-hint_tooltip = "Requires: Rubber x50, Leather x1, Knife x1, Needle x10, Thread x20
-Produces: Fireproof Armor x1"
-text = "Explore Desert"
-Requires = [ "Waterskin", "Boots" ]
-RequiredAmount = [ 0.1, 0.2 ]
-Produces = [ "Discovered Ruins" ]
+hint_tooltip = "Requires: Sword x0.1, Cloak x0.1, Boots x0.2
+Produces: Discovered Cave x1"
+text = "Explore Mountains"
+Requires = [ "Sword", "Cloak", "Boots" ]
+RequiredAmount = [ 0.1, 0.1, 0.2 ]
+Produces = [ "Discovered Cave" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Make Offering to Green Dragon" parent="Final Row/Green Dragon" instance=ExtResource( 2 )]
@@ -929,7 +928,7 @@ margin_bottom = 48.0
 hint_tooltip = "Requires: Waterskin x0.1, Boots x0.2
 Produces: Discovered Ruins x1"
 text = "Make Offering to Green Dragon"
-Requires = [ "Discovered Ruins", "Hare", "Morning Glory" ]
+Requires = [ "Discovered Cave", "Hare", "Morning Glory" ]
 RequiredAmount = [ 12.0, 50.0, 100.0 ]
 Produces = [ "Green Dragon Scale" ]
 ProducedAmount = [ 1.0 ]
@@ -947,7 +946,6 @@ Produces = [ "Hexproof Shield", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Blue Dragon" type="VBoxContainer" parent="Final Row"]
-editor/display_folded = true
 margin_left = 190.0
 margin_right = 346.0
 margin_bottom = 74.0
@@ -988,20 +986,19 @@ Produces = [ "Helm of Water Breathing", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Red Dragon" type="VBoxContainer" parent="Final Row"]
-editor/display_folded = true
 margin_left = 350.0
 margin_right = 496.0
 margin_bottom = 74.0
 script = ExtResource( 1 )
 
-[node name="Explore Mountains" parent="Final Row/Red Dragon" instance=ExtResource( 2 )]
+[node name="Explore Desert" parent="Final Row/Red Dragon" instance=ExtResource( 2 )]
 margin_right = 146.0
-hint_tooltip = "Requires: Sword x0.1, Cloak x0.1, Boots x0.2
-Produces: Discovered Cave x1"
-text = "Explore Mountains"
-Requires = [ "Sword", "Cloak", "Boots" ]
-RequiredAmount = [ 0.1, 0.1, 0.2 ]
-Produces = [ "Discovered Cave" ]
+hint_tooltip = "Requires: Rubber x50, Leather x1, Knife x1, Needle x10, Thread x20
+Produces: Fireproof Armor x1"
+text = "Explore Desert"
+Requires = [ "Waterskin", "Boots" ]
+RequiredAmount = [ 0.1, 0.2 ]
+Produces = [ "Discovered Ruins" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Slay Red Dragon" parent="Final Row/Red Dragon" instance=ExtResource( 2 )]
@@ -1011,7 +1008,7 @@ margin_bottom = 48.0
 hint_tooltip = "Requires: Discovered Cave x7, Sword x1, Iron Helm x0.2, Leather Armor x0.5, Boots x1
 Produces: Red Dragon Tooth x48"
 text = "Slay Red Dragon"
-Requires = [ "Discovered Cave", "Sword", "Iron Helm", "Leather Armor", "Boots" ]
+Requires = [ "Discovered Ruins", "Sword", "Iron Helm", "Leather Armor", "Boots" ]
 RequiredAmount = [ 7.0, 1.0, 0.2, 0.5, 1.0 ]
 Produces = [ "Red Dragon Tooth" ]
 ProducedAmount = [ 48.0 ]
