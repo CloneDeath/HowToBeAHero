@@ -6,7 +6,7 @@ export(Texture) var ResourceTexture = null;
 var count = 0;
 var required = 0;
 var produces = 0;
-var revealed = false;
+var crafted = false;
 
 func _ready():
 	if (!Engine.editor_hint):
@@ -36,13 +36,19 @@ func _process(_delta):
 		$Image.visible = true;
 		$Name.visible = true;
 		$Count.visible = true;
-		revealed = true;
+		crafted = true;
+
+func reveal(resource):
+	if (name != resource): return;
+	$Image.visible = true;
+	$Name.visible = true;
+	$Count.visible = true;
 
 func has_resource(resource, amount):
 	return name == resource && _has_enough(amount);
 
-func resource_is_visible(resource):
-	return name == resource && self.revealed;
+func resource_has_been_crafted(resource):
+	return name == resource && self.crafted;
 
 func take_resource(resource, amount):
 	if (name != resource): return;
@@ -51,6 +57,7 @@ func take_resource(resource, amount):
 func give_resource(resource, amount):
 	if (name != resource): return;
 	count += amount;
+	crafted = true;
 
 func clear_requirements():
 	required = 0;

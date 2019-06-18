@@ -25,5 +25,6 @@ func _process(_delta):
 func _check_resources():
 	var has_resources = $Resources.has_resources(Requires, RequiredAmount);
 	self.disabled = !has_resources;
-	if ($Resources.resources_are_visible(Requires)):
+	if ($Resources.resources_have_been_crafted(Requires)):
 		self.visible = true;
+		$Resources.reveal_resources(Produces);
