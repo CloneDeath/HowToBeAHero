@@ -47,10 +47,10 @@
 [ext_resource path="res://Resources/Images/Knife Blade.png" type="Texture" id=45]
 [ext_resource path="res://Resources/Images/Knife.png" type="Texture" id=46]
 [ext_resource path="res://Resources/Images/Tree Tap.png" type="Texture" id=47]
-[ext_resource path="res://Resources/Images/Wooden Bowl.png" type="Texture" id=48]
-[ext_resource path="res://Resources/Images/Morning Glory.png" type="Texture" id=49]
-[ext_resource path="res://Resources/Images/Morning Glory Juice.png" type="Texture" id=50]
-[ext_resource path="res://Resources/Images/Rubber Sap.png" type="Texture" id=51]
+[ext_resource path="res://Resources/Images/Morning Glory.png" type="Texture" id=48]
+[ext_resource path="res://Resources/Images/Wooden Bowl.png" type="Texture" id=49]
+[ext_resource path="res://Resources/Images/Rubber Sap.png" type="Texture" id=50]
+[ext_resource path="res://Resources/Images/Morning Glory Juice.png" type="Texture" id=51]
 [ext_resource path="res://Resources/Images/Rubber.png" type="Texture" id=52]
 [ext_resource path="res://Resources/Images/Boots.png" type="Texture" id=53]
 [ext_resource path="res://Resources/Images/Cloak.png" type="Texture" id=54]
@@ -97,18 +97,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Resources" type="VBoxContainer" parent="Contents"]
-margin_right = 1287.0
-margin_bottom = 446.0
+margin_right = 2431.0
+margin_bottom = 534.0
 
 [node name="First Row" type="HBoxContainer" parent="Contents/Resources"]
-margin_right = 1287.0
-margin_bottom = 254.0
+editor/display_folded = true
+margin_right = 2431.0
+margin_bottom = 276.0
 
 [node name="Stone" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
 margin_right = 107.0
-margin_bottom = 254.0
+margin_bottom = 276.0
 
 [node name="Stone" parent="Contents/Resources/First Row/Stone" instance=ExtResource( 3 )]
+editor/display_folded = true
 margin_left = 3.0
 margin_right = 103.0
 margin_bottom = 82.0
@@ -125,6 +128,7 @@ Produces = [ "Stone" ]
 ProducedAmount = [ 1 ]
 
 [node name="Sharp Stone" parent="Contents/Resources/First Row/Stone" instance=ExtResource( 3 )]
+editor/display_folded = true
 margin_top = 86.0
 margin_right = 107.0
 margin_bottom = 168.0
@@ -163,674 +167,38 @@ Produces = [ "Crushed Stone" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Leaves" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
 margin_left = 111.0
-margin_right = 166.0
-margin_bottom = 254.0
+margin_right = 268.0
+margin_bottom = 276.0
 
 [node name="Frond" parent="Contents/Resources/First Row/Leaves" instance=ExtResource( 3 )]
-margin_left = 11.0
-margin_right = 43.0
+editor/display_folded = true
+margin_left = 25.0
+margin_right = 131.0
+margin_bottom = 82.0
 ResourceTexture = ExtResource( 9 )
 
-[node name="Leaf" parent="Contents/Resources/First Row/Leaves" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 11.0
-margin_top = 64.0
-margin_right = 43.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 10 )
-
-[node name="Leaf Bundle" parent="Contents/Resources/First Row/Leaves" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 55.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 11 )
-
-[node name="Basket" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 170.0
-margin_right = 220.0
-margin_bottom = 254.0
-
-[node name="Loya Cane" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
-margin_right = 49.0
-ResourceTexture = ExtResource( 12 )
-
-[node name="Cane Strip" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 50.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 13 )
-
-[node name="Basket" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 9.0
-margin_top = 128.0
-margin_right = 41.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 14 )
-
-[node name="Wood" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 224.0
-margin_right = 264.0
-margin_bottom = 254.0
-
-[node name="Wood" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
-margin_left = 4.0
-margin_right = 36.0
-ResourceTexture = ExtResource( 15 )
-
-[node name="Fire" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 4.0
-margin_top = 64.0
-margin_right = 36.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 16 )
-
-[node name="Charcoal" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 40.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 17 )
-
-[node name="Axe" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 268.0
-margin_right = 327.0
-margin_bottom = 254.0
-
-[node name="Wood Handle" parent="Contents/Resources/First Row/Axe" instance=ExtResource( 3 )]
-margin_right = 59.0
-ResourceTexture = ExtResource( 18 )
-
-[node name="Axe" parent="Contents/Resources/First Row/Axe" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 13.0
-margin_top = 64.0
-margin_right = 45.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 19 )
-
-[node name="Forge" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 331.0
-margin_right = 363.0
-margin_bottom = 254.0
-
-[node name="Clay" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
-margin_right = 32.0
-ResourceTexture = ExtResource( 20 )
-
-[node name="Brick" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 32.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 21 )
-
-[node name="Forge" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 32.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 22 )
-
-[node name="Iron" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 367.0
-margin_right = 420.0
-margin_bottom = 254.0
-
-[node name="Iron Clump" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 53.0
-ResourceTexture = ExtResource( 23 )
-
-[node name="Iron Ore" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 5.0
-margin_top = 64.0
-margin_right = 47.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 24 )
-
-[node name="Iron Ingot" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 1.0
-margin_top = 128.0
-margin_right = 52.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 25 )
-
-[node name="Pickaxe" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 424.0
-margin_right = 509.0
-margin_bottom = 254.0
-
-[node name="Pickaxe Head Mold" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
-margin_right = 85.0
-ResourceTexture = ExtResource( 26 )
-
-[node name="Pickaxe Head" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 12.0
-margin_top = 64.0
-margin_right = 72.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 27 )
-
-[node name="Pickaxe" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 26.0
-margin_top = 128.0
-margin_right = 59.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 28 )
-
-[node name="Spear" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 513.0
-margin_right = 561.0
-margin_bottom = 254.0
-
-[node name="Wood Pole" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 48.0
-ResourceTexture = ExtResource( 29 )
-
-[node name="Spear" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 8.0
-margin_top = 64.0
-margin_right = 40.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 30 )
-
-[node name="Hare" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 8.0
-margin_top = 128.0
-margin_right = 40.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 31 )
-
-[node name="Leather" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 565.0
-margin_right = 629.0
-margin_bottom = 254.0
-
-[node name="Pelt" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 16.0
-margin_right = 48.0
-ResourceTexture = ExtResource( 32 )
-
-[node name="Leather" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 14.0
-margin_top = 64.0
-margin_right = 50.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 33 )
-
-[node name="Leather Strip" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 64.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 34 )
-
-[node name="Sword" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 633.0
-margin_right = 693.0
-margin_bottom = 254.0
-
-[node name="Sword Mold" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 2.0
-margin_right = 58.0
-ResourceTexture = ExtResource( 35 )
-
-[node name="Sword Blade" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 60.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 36 )
-
-[node name="Sword" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 14.0
-margin_top = 128.0
-margin_right = 46.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 37 )
-
-[node name="Thread" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 697.0
-margin_right = 729.0
-margin_bottom = 254.0
-
-[node name="Wool" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 32.0
-ResourceTexture = ExtResource( 38 )
-
-[node name="Spindle" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 32.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 39 )
-
-[node name="Thread" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 32.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 40 )
-
-[node name="Needle" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 733.0
-margin_right = 788.0
-margin_bottom = 254.0
-
-[node name="Needle Mold" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 55.0
-ResourceTexture = ExtResource( 41 )
-
-[node name="Dull Needle" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 2.0
-margin_top = 64.0
-margin_right = 53.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 42 )
-
-[node name="Needle" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 11.0
-margin_top = 128.0
-margin_right = 43.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 43 )
-
-[node name="Knife" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 792.0
-margin_right = 843.0
-margin_bottom = 254.0
-
-[node name="Knife Mold" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 2.0
-margin_right = 49.0
-ResourceTexture = ExtResource( 44 )
-
-[node name="Knife Blade" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 51.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 45 )
-
-[node name="Knife" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 9.0
-margin_top = 128.0
-margin_right = 41.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 46 )
-
-[node name="Rubber Ingredients" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 847.0
-margin_right = 910.0
-margin_bottom = 254.0
-
-[node name="Tree Tap" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 9.0
-margin_right = 53.0
-ResourceTexture = ExtResource( 47 )
-
-[node name="Wooden Bowl" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 63.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 48 )
-
-[node name="Morning Glory" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 63.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 49 )
-
-[node name="Rubber" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 914.0
-margin_right = 1007.0
-margin_bottom = 254.0
-
-[node name="Morning Glory Juice" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 93.0
-ResourceTexture = ExtResource( 50 )
-
-[node name="Rubber Sap" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 19.0
-margin_top = 64.0
-margin_right = 74.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 51 )
-
-[node name="Rubber" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 30.0
-margin_top = 128.0
-margin_right = 62.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 52 )
-
-[node name="Mountains" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 1011.0
-margin_right = 1043.0
-margin_bottom = 254.0
-
-[node name="Boots" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 32.0
-ResourceTexture = ExtResource( 53 )
-
-[node name="Cloak" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 32.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 54 )
-
-[node name="Bear" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 32.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 55 )
-
-[node name="Hammer" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 1047.0
-margin_right = 1135.0
-margin_bottom = 254.0
-
-[node name="Hammer Head Mold" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 88.0
-ResourceTexture = ExtResource( 56 )
-
-[node name="Hammer Head" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 12.0
-margin_top = 64.0
-margin_right = 75.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 57 )
-
-[node name="Hammer" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 26.0
-margin_top = 128.0
-margin_right = 62.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 58 )
-
-[node name="Anvil Base" type="VBoxContainer" parent="Contents/Resources/First Row"]
-editor/display_folded = true
-margin_left = 1139.0
-margin_right = 1212.0
-margin_bottom = 254.0
-
-[node name="Anvil Head Mold" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
-editor/display_folded = true
-ResourceTexture = ExtResource( 59 )
-
-[node name="Anvil Head" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 12.0
-margin_top = 64.0
-margin_right = 60.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 60 )
-
-[node name="Anvil Base" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 12.0
-margin_top = 128.0
-margin_right = 60.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 61 )
-
-[node name="Second Row" type="HBoxContainer" parent="Contents/Resources"]
-editor/display_folded = true
-margin_top = 258.0
-margin_right = 1287.0
-margin_bottom = 446.0
-
-[node name="Helm" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_right = 51.0
-margin_bottom = 188.0
-
-[node name="Iron Rivet" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 1.0
-margin_right = 50.0
-ResourceTexture = ExtResource( 62 )
-
-[node name="Iron Sheet" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 51.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 63 )
-
-[node name="Iron Helm" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 2.0
-margin_top = 128.0
-margin_right = 48.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 64 )
-
-[node name="Misc" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 55.0
-margin_right = 124.0
-margin_bottom = 188.0
-
-[node name="Anvil" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 18.0
-margin_right = 50.0
-ResourceTexture = ExtResource( 65 )
-
-[node name="Leather Armor" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 69.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 66 )
-
-[node name="Waterskin" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 11.0
-margin_top = 128.0
-margin_right = 58.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 67 )
-
-[node name="Misc2" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 128.0
-margin_right = 193.0
-margin_bottom = 188.0
-
-[node name="Torch" parent="Contents/Resources/Second Row/Misc2" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 16.0
-margin_right = 48.0
-ResourceTexture = ExtResource( 68 )
-
-[node name="Leather Mask" parent="Contents/Resources/Second Row/Misc2" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 65.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 69 )
-
-[node name="Green Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 197.0
-margin_right = 289.0
-margin_bottom = 188.0
-
-[node name="Discovered Cave" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 7.0
-margin_right = 84.0
-ResourceTexture = ExtResource( 70 )
-
-[node name="Green Dragon Scale" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 92.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 71 )
-
-[node name="Hexproof Shield" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 11.0
-margin_top = 128.0
-margin_right = 81.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 72 )
-
-[node name="Blue Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 293.0
-margin_right = 404.0
-margin_bottom = 188.0
-
-[node name="Discovered Lake" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 17.0
-margin_right = 93.0
-ResourceTexture = ExtResource( 73 )
-
-[node name="Blue Dragon Gills" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 16.0
-margin_top = 64.0
-margin_right = 94.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 74 )
-
-[node name="Helm of Waterbreathing" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 128.0
-margin_right = 111.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 75 )
-
-[node name="Red Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 408.0
-margin_right = 491.0
-margin_bottom = 188.0
-
-[node name="Discovered Ruins" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 2.0
-margin_right = 80.0
-ResourceTexture = ExtResource( 76 )
-
-[node name="Red Dragon Tooth" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_top = 64.0
-margin_right = 83.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 77 )
-
-[node name="Fireproof Armor" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 3.0
-margin_top = 128.0
-margin_right = 79.0
-margin_bottom = 188.0
-ResourceTexture = ExtResource( 78 )
-
-[node name="Final Battle" type="VBoxContainer" parent="Contents/Resources/Second Row"]
-editor/display_folded = true
-margin_left = 495.0
-margin_right = 573.0
-margin_bottom = 188.0
-
-[node name="Defeated Wizard" parent="Contents/Resources/Second Row/Final Battle" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_right = 78.0
-ResourceTexture = ExtResource( 79 )
-
-[node name="Princess" parent="Contents/Resources/Second Row/Final Battle" instance=ExtResource( 3 )]
-editor/display_folded = true
-margin_left = 20.0
-margin_top = 64.0
-margin_right = 58.0
-margin_bottom = 124.0
-ResourceTexture = ExtResource( 80 )
-
-[node name="Actions" type="VBoxContainer" parent="Contents"]
-margin_top = 450.0
-margin_right = 1287.0
-margin_bottom = 826.0
-custom_constants/separation = 25
-
-[node name="Top Row" type="HBoxContainer" parent="Contents/Actions"]
-editor/display_folded = true
-margin_right = 1287.0
-margin_bottom = 100.0
-
-[node name="Leaves" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_right = 157.0
-margin_bottom = 100.0
-
-[node name="Gather Fronds" parent="Contents/Actions/Top Row/Leaves" instance=ExtResource( 5 )]
-margin_right = 157.0
+[node name="Gather Fronds" parent="Contents/Resources/First Row/Leaves/Frond" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 106.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Gather Fronds"
 Produces = [ "Frond" ]
 ProducedAmount = [ 1 ]
 
-[node name="Strip Leaves from Frond" parent="Contents/Actions/Top Row/Leaves" instance=ExtResource( 5 )]
-margin_top = 26.0
+[node name="Leaf" parent="Contents/Resources/First Row/Leaves" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 157.0
-margin_bottom = 48.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 10 )
+
+[node name="Strip Leaves from Frond" parent="Contents/Resources/First Row/Leaves/Leaf" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 157.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Strip Leaves from Frond"
@@ -839,38 +207,17 @@ RequiredAmount = [ 1 ]
 Produces = [ "Leaf" ]
 ProducedAmount = [ 12 ]
 
-[node name="Basket" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 161.0
-margin_right = 285.0
-margin_bottom = 100.0
+[node name="Leaf Bundle" parent="Contents/Resources/First Row/Leaves" instance=ExtResource( 3 )]
+margin_left = 17.0
+margin_top = 172.0
+margin_right = 140.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 11 )
 
-[node name="Gather Loya Cane" parent="Contents/Actions/Top Row/Basket" instance=ExtResource( 5 )]
-margin_right = 124.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Gather Loya Cane"
-Requires = [ "Sharp Stone" ]
-RequiredAmount = [ 0.1 ]
-Produces = [ "Loya Cane" ]
-ProducedAmount = [ 1 ]
-
-[node name="Make Cane Strips" parent="Contents/Actions/Top Row/Basket" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 124.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Cane Strips"
-Requires = [ "Sharp Stone", "Loya Cane" ]
-RequiredAmount = [ 0.1, 1.0 ]
-Produces = [ "Cane Strip" ]
-ProducedAmount = [ 4 ]
-
-[node name="Make Leaf Bundle" parent="Contents/Actions/Top Row/Basket" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 124.0
-margin_bottom = 74.0
+[node name="Make Leaf Bundle" parent="Contents/Resources/First Row/Leaves/Leaf Bundle" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 123.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Leaf Bundle"
@@ -879,10 +226,57 @@ RequiredAmount = [ 8, 1 ]
 Produces = [ "Leaf Bundle" ]
 ProducedAmount = [ 1 ]
 
-[node name="Make Basket" parent="Contents/Actions/Top Row/Basket" instance=ExtResource( 5 )]
-margin_top = 78.0
+[node name="Basket" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 272.0
+margin_right = 396.0
+margin_bottom = 276.0
+
+[node name="Loya Cane" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
 margin_right = 124.0
-margin_bottom = 100.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 12 )
+
+[node name="Gather Loya Cane" parent="Contents/Resources/First Row/Basket/Loya Cane" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 124.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Gather Loya Cane"
+Requires = [ "Sharp Stone" ]
+RequiredAmount = [ 0.1 ]
+Produces = [ "Loya Cane" ]
+ProducedAmount = [ 1 ]
+
+[node name="Cane Strip" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
+margin_top = 86.0
+margin_right = 123.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 13 )
+
+[node name="Make Cane Strips" parent="Contents/Resources/First Row/Basket/Cane Strip" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 123.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Cane Strips"
+Requires = [ "Sharp Stone", "Loya Cane" ]
+RequiredAmount = [ 0.1, 1.0 ]
+Produces = [ "Cane Strip" ]
+ProducedAmount = [ 4 ]
+
+[node name="Basket" parent="Contents/Resources/First Row/Basket" instance=ExtResource( 3 )]
+margin_left = 12.0
+margin_top = 172.0
+margin_right = 111.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 14 )
+
+[node name="Make Basket" parent="Contents/Resources/First Row/Basket/Basket" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 99.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Basket"
@@ -891,14 +285,21 @@ RequiredAmount = [ 5, 15, 5 ]
 Produces = [ "Basket" ]
 ProducedAmount = [ 1 ]
 
-[node name="Wood" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 289.0
-margin_right = 397.0
-margin_bottom = 100.0
+[node name="Wood" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 400.0
+margin_right = 508.0
+margin_bottom = 276.0
 
-[node name="Chop Wood" parent="Contents/Actions/Top Row/Wood" instance=ExtResource( 5 )]
-margin_right = 108.0
+[node name="Wood" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
+margin_left = 8.0
+margin_right = 99.0
+margin_bottom = 104.0
+ResourceTexture = ExtResource( 15 )
+
+[node name="Chop Wood" parent="Contents/Resources/First Row/Wood/Wood" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 91.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Chop Wood"
@@ -907,62 +308,10 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Wood" ]
 ProducedAmount = [ 1 ]
 
-[node name="Start Fire" parent="Contents/Actions/Top Row/Wood" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 108.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Start Fire"
-Requires = [ "Wood" ]
-RequiredAmount = [ 1 ]
-Produces = [ "Fire" ]
-ProducedAmount = [ 10 ]
-
-[node name="Make Charcoal" parent="Contents/Actions/Top Row/Wood" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 108.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Charcoal"
-Requires = [ "Wood", "Fire" ]
-RequiredAmount = [ 10.0, 1.0 ]
-Produces = [ "Charcoal" ]
-ProducedAmount = [ 10 ]
-
-[node name="Axe" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 401.0
-margin_right = 528.0
-margin_bottom = 100.0
-
-[node name="Make Wood Handle" parent="Contents/Actions/Top Row/Axe" instance=ExtResource( 5 )]
-margin_right = 127.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Wood Handle"
-Requires = [ "Wood", "Sharp Stone" ]
-RequiredAmount = [ 1.0, 0.1 ]
-Produces = [ "Wood Handle" ]
-ProducedAmount = [ 1 ]
-
-[node name="Make Axe" parent="Contents/Actions/Top Row/Axe" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 127.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Axe"
-Requires = [ "Wood Handle", "Sharp Stone" ]
-RequiredAmount = [ 1, 1 ]
-Produces = [ "Axe" ]
-ProducedAmount = [ 1 ]
-
-[node name="Chop Tree" parent="Contents/Actions/Top Row/Axe" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 127.0
-margin_bottom = 74.0
+[node name="Chop Tree" parent="Contents/Resources/First Row/Wood/Wood" instance=ExtResource( 5 )]
+margin_top = 82.0
+margin_right = 91.0
+margin_bottom = 104.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Chop Tree"
@@ -971,14 +320,98 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Wood" ]
 ProducedAmount = [ 30 ]
 
-[node name="Clay" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 532.0
-margin_right = 626.0
-margin_bottom = 100.0
+[node name="Fire" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
+margin_left = 10.0
+margin_top = 108.0
+margin_right = 97.0
+margin_bottom = 190.0
+ResourceTexture = ExtResource( 16 )
 
-[node name="Gather Clay" parent="Contents/Actions/Top Row/Clay" instance=ExtResource( 5 )]
+[node name="Start Fire" parent="Contents/Resources/First Row/Wood/Fire" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 87.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Start Fire"
+Requires = [ "Wood" ]
+RequiredAmount = [ 1 ]
+Produces = [ "Fire" ]
+ProducedAmount = [ 10 ]
+
+[node name="Charcoal" parent="Contents/Resources/First Row/Wood" instance=ExtResource( 3 )]
+margin_top = 194.0
+margin_right = 108.0
+margin_bottom = 276.0
+ResourceTexture = ExtResource( 17 )
+
+[node name="Make Charcoal" parent="Contents/Resources/First Row/Wood/Charcoal" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 108.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Charcoal"
+Requires = [ "Wood", "Fire" ]
+RequiredAmount = [ 10.0, 1.0 ]
+Produces = [ "Charcoal" ]
+ProducedAmount = [ 10 ]
+
+[node name="Axe" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 512.0
+margin_right = 639.0
+margin_bottom = 276.0
+
+[node name="Wood Handle" parent="Contents/Resources/First Row/Axe" instance=ExtResource( 3 )]
+margin_right = 127.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 18 )
+
+[node name="Make Wood Handle" parent="Contents/Resources/First Row/Axe/Wood Handle" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 127.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Wood Handle"
+Requires = [ "Wood", "Sharp Stone" ]
+RequiredAmount = [ 1.0, 0.1 ]
+Produces = [ "Wood Handle" ]
+ProducedAmount = [ 1 ]
+
+[node name="Axe" parent="Contents/Resources/First Row/Axe" instance=ExtResource( 3 )]
+margin_left = 22.0
+margin_top = 86.0
+margin_right = 105.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 19 )
+
+[node name="Make Axe" parent="Contents/Resources/First Row/Axe/Axe" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 83.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Axe"
+Requires = [ "Wood Handle", "Sharp Stone" ]
+RequiredAmount = [ 1, 1 ]
+Produces = [ "Axe" ]
+ProducedAmount = [ 1 ]
+
+[node name="Forge" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 643.0
+margin_right = 737.0
+margin_bottom = 276.0
+
+[node name="Clay" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
 margin_right = 94.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 20 )
+
+[node name="Gather Clay" parent="Contents/Resources/First Row/Forge/Clay" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 94.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Gather Clay"
@@ -987,10 +420,17 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Clay" ]
 ProducedAmount = [ 20 ]
 
-[node name="Fire Brick" parent="Contents/Actions/Top Row/Clay" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 94.0
-margin_bottom = 48.0
+[node name="Brick" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
+margin_left = 4.0
+margin_top = 86.0
+margin_right = 89.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 21 )
+
+[node name="Fire Brick" parent="Contents/Resources/First Row/Forge/Brick" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 85.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Fire Brick"
@@ -999,10 +439,16 @@ RequiredAmount = [ 10.0, 1.0 ]
 Produces = [ "Brick" ]
 ProducedAmount = [ 10 ]
 
-[node name="Make Forge" parent="Contents/Actions/Top Row/Clay" instance=ExtResource( 5 )]
-margin_top = 52.0
+[node name="Forge" parent="Contents/Resources/First Row/Forge" instance=ExtResource( 3 )]
+margin_top = 172.0
 margin_right = 94.0
-margin_bottom = 74.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 22 )
+
+[node name="Make Forge" parent="Contents/Resources/First Row/Forge/Forge" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 94.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Forge"
@@ -1011,14 +457,20 @@ RequiredAmount = [ 30.0 ]
 Produces = [ "Forge" ]
 ProducedAmount = [ 1 ]
 
-[node name="Iron" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 630.0
-margin_right = 765.0
-margin_bottom = 100.0
+[node name="Iron" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 741.0
+margin_right = 876.0
+margin_bottom = 276.0
 
-[node name="Smelt Crushed Stone" parent="Contents/Actions/Top Row/Iron" instance=ExtResource( 5 )]
+[node name="Iron Clump" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
 margin_right = 135.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 23 )
+
+[node name="Smelt Crushed Stone" parent="Contents/Resources/First Row/Iron/Iron Clump" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 135.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Smelt Crushed Stone"
@@ -1027,74 +479,17 @@ RequiredAmount = [ 10.0, 0.1, 1.0, 10.0 ]
 Produces = [ "Iron Clump" ]
 ProducedAmount = [ 3.0 ]
 
-[node name="Smelt Iron Clump" parent="Contents/Actions/Top Row/Iron" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 135.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Smelt Iron Clump"
-Requires = [ "Iron Clump", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 7.0, 0.1, 1.0, 10.0 ]
-Produces = [ "Iron Ingot" ]
-ProducedAmount = [ 1.0 ]
+[node name="Iron Ore" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
+margin_left = 14.0
+margin_top = 86.0
+margin_right = 120.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 24 )
 
-[node name="Smelt Iron Ore" parent="Contents/Actions/Top Row/Iron" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 135.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Smelt Iron Ore"
-Requires = [ "Iron Ore", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 10.0, 0.1, 1.0, 50.0 ]
-Produces = [ "Iron Ingot" ]
-ProducedAmount = [ 10.0 ]
-
-[node name="Pickaxe" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 769.0
-margin_right = 921.0
-margin_bottom = 100.0
-
-[node name="Form Pickaxe Head Mold" parent="Contents/Actions/Top Row/Pickaxe" instance=ExtResource( 5 )]
-margin_right = 152.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Form Pickaxe Head Mold"
-Requires = [ "Clay" ]
-RequiredAmount = [ 2.0 ]
-Produces = [ "Pickaxe Head Mold" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Smelt Pickaxe Head" parent="Contents/Actions/Top Row/Pickaxe" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 152.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Smelt Pickaxe Head"
-Requires = [ "Pickaxe Head Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
-RequiredAmount = [ 0.1, 1.0, 0.1, 5.0, 1.0 ]
-Produces = [ "Pickaxe Head" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Make Pickaxe" parent="Contents/Actions/Top Row/Pickaxe" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 152.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Pickaxe"
-Requires = [ "Wood Handle", "Pickaxe Head" ]
-RequiredAmount = [ 1.0, 1.0 ]
-Produces = [ "Pickaxe" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Mine Iron Ore" parent="Contents/Actions/Top Row/Pickaxe" instance=ExtResource( 5 )]
-margin_top = 78.0
-margin_right = 152.0
-margin_bottom = 100.0
+[node name="Mine Iron Ore" parent="Contents/Resources/First Row/Iron/Iron Ore" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 106.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Mine Iron Ore"
@@ -1103,14 +498,117 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Iron Ore", "Stone", "Sharp Stone", "Crushed Stone" ]
 ProducedAmount = [ 6.0, 24.0, 6.0, 2.0 ]
 
-[node name="Spear" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 925.0
-margin_right = 1051.0
-margin_bottom = 100.0
+[node name="Iron Ingot" parent="Contents/Resources/First Row/Iron" instance=ExtResource( 3 )]
+margin_left = 7.0
+margin_top = 172.0
+margin_right = 128.0
+margin_bottom = 276.0
+ResourceTexture = ExtResource( 25 )
 
-[node name="Make Wooden Pole" parent="Contents/Actions/Top Row/Spear" instance=ExtResource( 5 )]
+[node name="Smelt Iron Clump" parent="Contents/Resources/First Row/Iron/Iron Ingot" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 121.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Smelt Iron Clump"
+Requires = [ "Iron Clump", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 7.0, 0.1, 1.0, 10.0 ]
+Produces = [ "Iron Ingot" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Smelt Iron Ore" parent="Contents/Resources/First Row/Iron/Iron Ingot" instance=ExtResource( 5 )]
+margin_top = 82.0
+margin_right = 121.0
+margin_bottom = 104.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Smelt Iron Ore"
+Requires = [ "Iron Ore", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 10.0, 0.1, 1.0, 50.0 ]
+Produces = [ "Iron Ingot" ]
+ProducedAmount = [ 10.0 ]
+
+[node name="Pickaxe" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
+margin_left = 880.0
+margin_right = 1032.0
+margin_bottom = 276.0
+
+[node name="Pickaxe Head Mold" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_right = 152.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 26 )
+
+[node name="Form Pickaxe Head Mold" parent="Contents/Resources/First Row/Pickaxe/Pickaxe Head Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 152.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Form Pickaxe Head Mold"
+Requires = [ "Clay" ]
+RequiredAmount = [ 2.0 ]
+Produces = [ "Pickaxe Head Mold" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Pickaxe Head" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 12.0
+margin_top = 86.0
+margin_right = 140.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 27 )
+
+[node name="Smelt Pickaxe Head" parent="Contents/Resources/First Row/Pickaxe/Pickaxe Head" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 128.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Smelt Pickaxe Head"
+Requires = [ "Pickaxe Head Mold", "Iron Ingot", "Forge", "Charcoal", "Fire" ]
+RequiredAmount = [ 0.1, 1.0, 0.1, 5.0, 1.0 ]
+Produces = [ "Pickaxe Head" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Pickaxe" parent="Contents/Resources/First Row/Pickaxe" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 25.0
+margin_top = 172.0
 margin_right = 126.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 28 )
+
+[node name="Make Pickaxe" parent="Contents/Resources/First Row/Pickaxe/Pickaxe" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 101.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Pickaxe"
+Requires = [ "Wood Handle", "Pickaxe Head" ]
+RequiredAmount = [ 1.0, 1.0 ]
+Produces = [ "Pickaxe" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Spear" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
+margin_left = 1036.0
+margin_right = 1162.0
+margin_bottom = 276.0
+
+[node name="Wood Pole" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_right = 126.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 29 )
+
+[node name="Make Wooden Pole" parent="Contents/Resources/First Row/Spear/Wood Pole" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 126.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Wooden Pole"
@@ -1119,10 +617,18 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Wood Pole" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Make Spear" parent="Contents/Actions/Top Row/Spear" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 126.0
-margin_bottom = 48.0
+[node name="Spear" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 15.0
+margin_top = 86.0
+margin_right = 111.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 30 )
+
+[node name="Make Spear" parent="Contents/Resources/First Row/Spear/Spear" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 96.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Spear"
@@ -1131,10 +637,18 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Spear" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Hunt Hare" parent="Contents/Actions/Top Row/Spear" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 126.0
-margin_bottom = 74.0
+[node name="Hare" parent="Contents/Resources/First Row/Spear" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 19.0
+margin_top = 172.0
+margin_right = 106.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 31 )
+
+[node name="Hunt Hare" parent="Contents/Resources/First Row/Spear/Hare" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 87.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Hunt Hare"
@@ -1143,10 +657,23 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Hare" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Flay Hare" parent="Contents/Actions/Top Row/Spear" instance=ExtResource( 5 )]
-margin_top = 78.0
-margin_right = 126.0
-margin_bottom = 100.0
+[node name="Leather" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
+margin_left = 1166.0
+margin_right = 1269.0
+margin_bottom = 276.0
+
+[node name="Pelt" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 9.0
+margin_right = 94.0
+margin_bottom = 104.0
+ResourceTexture = ExtResource( 32 )
+
+[node name="Flay Hare" parent="Contents/Resources/First Row/Leather/Pelt" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 85.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Flay Hare"
@@ -1155,26 +682,10 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Pelt" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Leather" type="VBoxContainer" parent="Contents/Actions/Top Row"]
-editor/display_folded = true
-margin_left = 1055.0
-margin_right = 1158.0
-margin_bottom = 100.0
-
-[node name="Hunt Bear" parent="Contents/Actions/Top Row/Leather" instance=ExtResource( 5 )]
-margin_right = 103.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Hunt Bear"
-Requires = [ "Sword", "Discovered Cave" ]
-RequiredAmount = [ 0.1, 0.1 ]
-Produces = [ "Bear" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Flay Bear" parent="Contents/Actions/Top Row/Leather" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 103.0
-margin_bottom = 48.0
+[node name="Flay Bear" parent="Contents/Resources/First Row/Leather/Pelt" instance=ExtResource( 5 )]
+margin_top = 82.0
+margin_right = 85.0
+margin_bottom = 104.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Flay Bear"
@@ -1183,10 +694,18 @@ RequiredAmount = [ 1.0, 0.1 ]
 Produces = [ "Pelt" ]
 ProducedAmount = [ 16.0 ]
 
-[node name="Tan Pelt" parent="Contents/Actions/Top Row/Leather" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 103.0
-margin_bottom = 74.0
+[node name="Leather" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 12.0
+margin_top = 108.0
+margin_right = 90.0
+margin_bottom = 190.0
+ResourceTexture = ExtResource( 33 )
+
+[node name="Tan Pelt" parent="Contents/Resources/First Row/Leather/Leather" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 78.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Tan Pelt"
@@ -1195,10 +714,17 @@ RequiredAmount = [ 1.0 ]
 Produces = [ "Leather" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Strip Leather" parent="Contents/Actions/Top Row/Leather" instance=ExtResource( 5 )]
-margin_top = 78.0
+[node name="Leather Strip" parent="Contents/Resources/First Row/Leather" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 194.0
 margin_right = 103.0
-margin_bottom = 100.0
+margin_bottom = 276.0
+ResourceTexture = ExtResource( 34 )
+
+[node name="Strip Leather" parent="Contents/Resources/First Row/Leather/Leather Strip" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 103.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Strip Leather"
@@ -1207,19 +733,23 @@ RequiredAmount = [ 1.0, 0.1 ]
 Produces = [ "Leather Strip" ]
 ProducedAmount = [ 4.0 ]
 
-[node name="Middle Row" type="HBoxContainer" parent="Contents/Actions"]
+[node name="Sword" type="VBoxContainer" parent="Contents/Resources/First Row"]
 editor/display_folded = true
-margin_top = 125.0
-margin_right = 1287.0
-margin_bottom = 277.0
+margin_left = 1273.0
+margin_right = 1401.0
+margin_bottom = 276.0
 
-[node name="Sword" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
+[node name="Sword Mold" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
 editor/display_folded = true
-margin_right = 128.0
-margin_bottom = 152.0
+margin_left = 2.0
+margin_right = 125.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 35 )
 
-[node name="Form Sword Mold" parent="Contents/Actions/Middle Row/Sword" instance=ExtResource( 5 )]
-margin_right = 128.0
+[node name="Form Sword Mold" parent="Contents/Resources/First Row/Sword/Sword Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 123.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Form Sword Mold"
@@ -1228,10 +758,17 @@ RequiredAmount = [ 5.0 ]
 Produces = [ "Sword Mold" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Smelt Sword Blade" parent="Contents/Actions/Middle Row/Sword" instance=ExtResource( 5 )]
-margin_top = 26.0
+[node name="Sword Blade" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 128.0
-margin_bottom = 48.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 36 )
+
+[node name="Smelt Sword Blade" parent="Contents/Resources/First Row/Sword/Sword Blade" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 128.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Smelt Sword Blade"
@@ -1240,10 +777,18 @@ RequiredAmount = [ 0.1, 8.0, 0.1, 20.0, 1.0 ]
 Produces = [ "Sword Blade" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Hilt Sword" parent="Contents/Actions/Middle Row/Sword" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 128.0
-margin_bottom = 74.0
+[node name="Sword" parent="Contents/Resources/First Row/Sword" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 19.0
+margin_top = 172.0
+margin_right = 108.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 37 )
+
+[node name="Hilt Sword" parent="Contents/Resources/First Row/Sword/Sword" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 89.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Hilt Sword"
@@ -1252,14 +797,21 @@ RequiredAmount = [ 1.0, 5.0 ]
 Produces = [ "Sword" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Thread" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 132.0
-margin_right = 231.0
-margin_bottom = 152.0
+[node name="Thread" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 1405.0
+margin_right = 1504.0
+margin_bottom = 276.0
 
-[node name="Shear Sheep" parent="Contents/Actions/Middle Row/Thread" instance=ExtResource( 5 )]
-margin_right = 99.0
+[node name="Wool" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_right = 98.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 38 )
+
+[node name="Shear Sheep" parent="Contents/Resources/First Row/Thread/Wool" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 98.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Shear Sheep"
@@ -1268,10 +820,17 @@ RequiredAmount = [ 1.0 ]
 Produces = [ "Wool" ]
 ProducedAmount = [ 10.0 ]
 
-[node name="Make Spindle" parent="Contents/Actions/Middle Row/Thread" instance=ExtResource( 5 )]
-margin_top = 26.0
+[node name="Spindle" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 99.0
-margin_bottom = 48.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 39 )
+
+[node name="Make Spindle" parent="Contents/Resources/First Row/Thread/Spindle" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 99.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Spindle"
@@ -1280,10 +839,18 @@ RequiredAmount = [ 0.1, 1.0 ]
 Produces = [ "Spindle" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Spin Thread" parent="Contents/Actions/Middle Row/Thread" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 99.0
-margin_bottom = 74.0
+[node name="Thread" parent="Contents/Resources/First Row/Thread" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 2.0
+margin_top = 172.0
+margin_right = 97.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 40 )
+
+[node name="Spin Thread" parent="Contents/Resources/First Row/Thread/Thread" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 95.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Spin Thread"
@@ -1292,14 +859,21 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Thread" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Needle" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 235.0
-margin_right = 357.0
-margin_bottom = 152.0
+[node name="Needle" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 1508.0
+margin_right = 1630.0
+margin_bottom = 276.0
 
-[node name="Form Needle Mold" parent="Contents/Actions/Middle Row/Needle" instance=ExtResource( 5 )]
+[node name="Needle Mold" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
+editor/display_folded = true
 margin_right = 122.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 41 )
+
+[node name="Form Needle Mold" parent="Contents/Resources/First Row/Needle/Needle Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 122.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Form Needle Mold"
@@ -1308,10 +882,18 @@ RequiredAmount = [ 1.0 ]
 Produces = [ "Needle Mold" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Smelt Needle" parent="Contents/Actions/Middle Row/Needle" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 122.0
-margin_bottom = 48.0
+[node name="Dull Needle" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 12.0
+margin_top = 86.0
+margin_right = 110.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 42 )
+
+[node name="Smelt Needle" parent="Contents/Resources/First Row/Needle/Dull Needle" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 98.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Smelt Needle"
@@ -1320,10 +902,18 @@ RequiredAmount = [ 0.1, 1.0, 0.1, 10.0, 1.0 ]
 Produces = [ "Dull Needle" ]
 ProducedAmount = [ 12.0 ]
 
-[node name="Sharpen Needle" parent="Contents/Actions/Middle Row/Needle" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 122.0
-margin_bottom = 74.0
+[node name="Needle" parent="Contents/Resources/First Row/Needle" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 5.0
+margin_top = 172.0
+margin_right = 117.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 43 )
+
+[node name="Sharpen Needle" parent="Contents/Resources/First Row/Needle/Needle" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 112.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Sharpen Needle"
@@ -1332,14 +922,22 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Needle" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Knife" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 361.0
-margin_right = 480.0
-margin_bottom = 152.0
+[node name="Knife" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 1634.0
+margin_right = 1753.0
+margin_bottom = 276.0
 
-[node name="Form Knife Mold" parent="Contents/Actions/Middle Row/Knife" instance=ExtResource( 5 )]
-margin_right = 119.0
+[node name="Knife Mold" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 2.0
+margin_right = 116.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 44 )
+
+[node name="Form Knife Mold" parent="Contents/Resources/First Row/Knife/Knife Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 114.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Form Knife Mold"
@@ -1348,10 +946,17 @@ RequiredAmount = [ 3.0 ]
 Produces = [ "Knife Mold" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Smelt Knife Blade" parent="Contents/Actions/Middle Row/Knife" instance=ExtResource( 5 )]
-margin_top = 26.0
+[node name="Knife Blade" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 119.0
-margin_bottom = 48.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 45 )
+
+[node name="Smelt Knife Blade" parent="Contents/Resources/First Row/Knife/Knife Blade" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 119.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Smelt Knife Blade"
@@ -1360,10 +965,18 @@ RequiredAmount = [ 0.1, 2.0, 0.1, 10.0, 1.0 ]
 Produces = [ "Knife Blade" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Construct Knife" parent="Contents/Actions/Middle Row/Knife" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 119.0
-margin_bottom = 74.0
+[node name="Knife" parent="Contents/Resources/First Row/Knife" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 4.0
+margin_top = 172.0
+margin_right = 115.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 46 )
+
+[node name="Construct Knife" parent="Contents/Resources/First Row/Knife/Knife" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 111.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Construct Knife"
@@ -1372,14 +985,22 @@ RequiredAmount = [ 1.0, 1.0, 1.0, 1.0 ]
 Produces = [ "Knife" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Rubber" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 484.0
-margin_right = 622.0
-margin_bottom = 152.0
+[node name="Rubber Ingredients" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 1757.0
+margin_right = 1895.0
+margin_bottom = 276.0
 
-[node name="Make Tree Tap" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_right = 138.0
+[node name="Tree Tap" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 13.0
+margin_right = 125.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 47 )
+
+[node name="Make Tree Tap" parent="Contents/Resources/First Row/Rubber Ingredients/Tree Tap" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 112.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Tree Tap"
@@ -1388,22 +1009,17 @@ RequiredAmount = [ 1.0, 0.1, 1.0, 1.0 ]
 Produces = [ "Tree Tap", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Make Wooden Bowl" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_top = 26.0
+[node name="Morning Glory" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 138.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Wooden Bowl"
-Requires = [ "Knife", "Wood" ]
-RequiredAmount = [ 0.1, 1.0 ]
-Produces = [ "Wooden Bowl" ]
-ProducedAmount = [ 1.0 ]
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 48 )
 
-[node name="Gather Morning Glory" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_top = 52.0
+[node name="Gather Morning Glory" parent="Contents/Resources/First Row/Rubber Ingredients/Morning Glory" instance=ExtResource( 5 )]
+margin_top = 60.0
 margin_right = 138.0
-margin_bottom = 74.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Gather Morning Glory"
@@ -1412,22 +1028,42 @@ RequiredAmount = [ 0.1 ]
 Produces = [ "Morning Glory" ]
 ProducedAmount = [ 40.0 ]
 
-[node name="Juice Morning Glory" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_top = 78.0
-margin_right = 138.0
-margin_bottom = 100.0
+[node name="Wooden Bowl" parent="Contents/Resources/First Row/Rubber Ingredients" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 3.0
+margin_top = 172.0
+margin_right = 134.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 49 )
+
+[node name="Make Wooden Bowl" parent="Contents/Resources/First Row/Rubber Ingredients/Wooden Bowl" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 131.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
-text = "Juice Morning Glory"
-Requires = [ "Morning Glory", "Wooden Bowl" ]
-RequiredAmount = [ 10.0, 1.0 ]
-Produces = [ "Morning Glory Juice" ]
+text = "Make Wooden Bowl"
+Requires = [ "Knife", "Wood" ]
+RequiredAmount = [ 0.1, 1.0 ]
+Produces = [ "Wooden Bowl" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Tap Rubber Tree" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_top = 104.0
-margin_right = 138.0
-margin_bottom = 126.0
+[node name="Rubber" type="VBoxContainer" parent="Contents/Resources/First Row"]
+margin_left = 1899.0
+margin_right = 2031.0
+margin_bottom = 276.0
+
+[node name="Rubber Sap" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 6.0
+margin_right = 126.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 50 )
+
+[node name="Tap Rubber Tree" parent="Contents/Resources/First Row/Rubber/Rubber Sap" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Tap Rubber Tree"
@@ -1436,10 +1072,37 @@ RequiredAmount = [ 0.1, 0.2, 1.0, 1.0 ]
 Produces = [ "Rubber Sap" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Mix Rubber" parent="Contents/Actions/Middle Row/Rubber" instance=ExtResource( 5 )]
-margin_top = 130.0
-margin_right = 138.0
-margin_bottom = 152.0
+[node name="Morning Glory Juice" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
+margin_right = 132.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 51 )
+
+[node name="Juice Morning Glory" parent="Contents/Resources/First Row/Rubber/Morning Glory Juice" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 132.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Juice Morning Glory"
+Requires = [ "Morning Glory", "Wooden Bowl" ]
+RequiredAmount = [ 10.0, 1.0 ]
+Produces = [ "Morning Glory Juice" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Rubber" parent="Contents/Resources/First Row/Rubber" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 21.0
+margin_top = 172.0
+margin_right = 111.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 52 )
+
+[node name="Mix Rubber" parent="Contents/Resources/First Row/Rubber/Rubber" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Mix Rubber"
@@ -1448,146 +1111,22 @@ RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Rubber", "Wooden Bowl" ]
 ProducedAmount = [ 1.0, 2.0 ]
 
-[node name="Anvil" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
+[node name="Mountains" type="VBoxContainer" parent="Contents/Resources/First Row"]
 editor/display_folded = true
-margin_left = 626.0
-margin_right = 766.0
-margin_bottom = 152.0
+margin_left = 2035.0
+margin_right = 2128.0
+margin_bottom = 276.0
 
-[node name="Form Anvil Head Mold" parent="Contents/Actions/Middle Row/Anvil" instance=ExtResource( 5 )]
-margin_right = 140.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Form Anvil Head Mold"
-Requires = [ "Clay" ]
-RequiredAmount = [ 25.0 ]
-Produces = [ "Anvil Head Mold" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Smelt Anvil Head" parent="Contents/Actions/Middle Row/Anvil" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 140.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Smelt Anvil Head"
-Requires = [ "Anvil Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 1.0, 20.0, 0.1, 1.0, 80.0 ]
-Produces = [ "Anvil Head" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Carve Anvil Base" parent="Contents/Actions/Middle Row/Anvil" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 140.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Carve Anvil Base"
-Requires = [ "Wood", "Knife", "Hammer" ]
-RequiredAmount = [ 1.0, 1.0, 0.1 ]
-Produces = [ "Anvil Base" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Assemble Anvil" parent="Contents/Actions/Middle Row/Anvil" instance=ExtResource( 5 )]
-margin_top = 78.0
-margin_right = 140.0
-margin_bottom = 100.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Assemble Anvil"
-Requires = [ "Anvil Head", "Anvil Base" ]
-RequiredAmount = [ 1.0, 1.0 ]
-Produces = [ "Anvil" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Hammer" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
+[node name="Boots" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
 editor/display_folded = true
-margin_left = 770.0
-margin_right = 925.0
-margin_bottom = 152.0
-
-[node name="Form Hammer Head Mold" parent="Contents/Actions/Middle Row/Hammer" instance=ExtResource( 5 )]
-margin_right = 155.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Form Hammer Head Mold"
-Requires = [ "Clay" ]
-RequiredAmount = [ 1.0 ]
-Produces = [ "Hammer Head Mold" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Smelt Hammer Head" parent="Contents/Actions/Middle Row/Hammer" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 155.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Smelt Hammer Head"
-Requires = [ "Hammer Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
-RequiredAmount = [ 0.1, 3.0, 0.1, 1.0, 10.0 ]
-Produces = [ "Hammer Head" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Construct Hammer" parent="Contents/Actions/Middle Row/Hammer" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 155.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Construct Hammer"
-Requires = [ "Hammer Head", "Wood Handle" ]
-RequiredAmount = [ 1.0, 1.0 ]
-Produces = [ "Hammer" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Helm" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 929.0
-margin_right = 1048.0
-margin_bottom = 152.0
-
-[node name="Make Iron Rivet" parent="Contents/Actions/Middle Row/Helm" instance=ExtResource( 5 )]
-margin_right = 119.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Iron Rivet"
-Requires = [ "Dull Needle", "Hammer" ]
-RequiredAmount = [ 1.0, 0.1 ]
-Produces = [ "Iron Rivet" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Make Iron Sheet" parent="Contents/Actions/Middle Row/Helm" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 119.0
-margin_bottom = 48.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Iron Sheet"
-Requires = [ "Iron Ingot", "Forge", "Fire", "Charcoal", "Hammer", "Anvil" ]
-RequiredAmount = [ 2.0, 0.1, 1.0, 10.0, 0.1, 0.1 ]
-Produces = [ "Iron Sheet" ]
-ProducedAmount = [ 1.0 ]
-
-[node name="Make Iron Helm" parent="Contents/Actions/Middle Row/Helm" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 119.0
-margin_bottom = 74.0
-hint_tooltip = ""
-custom_fonts/font = SubResource( 1 )
-text = "Make Iron Helm"
-Requires = [ "Iron Sheet", "Iron Rivet", "Leather Strip", "Knife", "Thread", "Needle", "Hammer", "Anvil" ]
-RequiredAmount = [ 3.0, 20.0, 7.0, 0.2, 0.5, 1.0, 0.1, 0.1 ]
-Produces = [ "Iron Helm", "Dull Needle" ]
-ProducedAmount = [ 1.0, 1.0 ]
-
-[node name="Mountains" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
-editor/display_folded = true
-margin_left = 1052.0
-margin_right = 1145.0
-margin_bottom = 152.0
-
-[node name="Make Boots" parent="Contents/Actions/Middle Row/Mountains" instance=ExtResource( 5 )]
 margin_right = 93.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 53 )
+
+[node name="Make Boots" parent="Contents/Resources/First Row/Mountains/Boots" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 93.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Boots"
@@ -1596,10 +1135,17 @@ RequiredAmount = [ 4.0, 0.1, 1.0, 1.0, 3.0, 4.0 ]
 Produces = [ "Boots", "Dull Needle" ]
 ProducedAmount = [ 2.0, 1.0 ]
 
-[node name="Make Cloak" parent="Contents/Actions/Middle Row/Mountains" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 93.0
-margin_bottom = 48.0
+[node name="Cloak" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
+margin_right = 92.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 54 )
+
+[node name="Make Cloak" parent="Contents/Resources/First Row/Mountains/Cloak" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 92.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Cloak"
@@ -1608,14 +1154,258 @@ RequiredAmount = [ 40.0, 1.0, 2.0, 0.5 ]
 Produces = [ "Cloak", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Misc" type="VBoxContainer" parent="Contents/Actions/Middle Row"]
+[node name="Bear" parent="Contents/Resources/First Row/Mountains" instance=ExtResource( 3 )]
 editor/display_folded = true
-margin_left = 1149.0
-margin_right = 1287.0
-margin_bottom = 152.0
+margin_left = 3.0
+margin_top = 172.0
+margin_right = 90.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 55 )
 
-[node name="Craft Leather Armor" parent="Contents/Actions/Middle Row/Misc" instance=ExtResource( 5 )]
+[node name="Hunt Bear" parent="Contents/Resources/First Row/Mountains/Bear" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 87.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Hunt Bear"
+Requires = [ "Sword", "Discovered Cave" ]
+RequiredAmount = [ 0.1, 0.1 ]
+Produces = [ "Bear" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Hammer" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
+margin_left = 2132.0
+margin_right = 2287.0
+margin_bottom = 276.0
+
+[node name="Hammer Head Mold" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_right = 155.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 56 )
+
+[node name="Form Hammer Head Mold" parent="Contents/Resources/First Row/Hammer/Hammer Head Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 155.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Form Hammer Head Mold"
+Requires = [ "Clay" ]
+RequiredAmount = [ 1.0 ]
+Produces = [ "Hammer Head Mold" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Hammer Head" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 12.0
+margin_top = 86.0
+margin_right = 143.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 57 )
+
+[node name="Smelt Hammer Head" parent="Contents/Resources/First Row/Hammer/Hammer Head" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 131.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Smelt Hammer Head"
+Requires = [ "Hammer Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 0.1, 3.0, 0.1, 1.0, 10.0 ]
+Produces = [ "Hammer Head" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Hammer" parent="Contents/Resources/First Row/Hammer" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 15.0
+margin_top = 172.0
+margin_right = 140.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 58 )
+
+[node name="Construct Hammer" parent="Contents/Resources/First Row/Hammer/Hammer" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 125.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Construct Hammer"
+Requires = [ "Hammer Head", "Wood Handle" ]
+RequiredAmount = [ 1.0, 1.0 ]
+Produces = [ "Hammer" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Anvil Base" type="VBoxContainer" parent="Contents/Resources/First Row"]
+editor/display_folded = true
+margin_left = 2291.0
+margin_right = 2431.0
+margin_bottom = 276.0
+
+[node name="Anvil Head Mold" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_right = 140.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 59 )
+
+[node name="Form Anvil Head Mold" parent="Contents/Resources/First Row/Anvil Base/Anvil Head Mold" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 140.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Form Anvil Head Mold"
+Requires = [ "Clay" ]
+RequiredAmount = [ 25.0 ]
+Produces = [ "Anvil Head Mold" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Anvil Head" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 12.0
+margin_top = 86.0
+margin_right = 128.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 60 )
+
+[node name="Smelt Anvil Head" parent="Contents/Resources/First Row/Anvil Base/Anvil Head" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 116.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Smelt Anvil Head"
+Requires = [ "Anvil Head Mold", "Iron Ingot", "Forge", "Fire", "Charcoal" ]
+RequiredAmount = [ 1.0, 20.0, 0.1, 1.0, 80.0 ]
+Produces = [ "Anvil Head" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Anvil Base" parent="Contents/Resources/First Row/Anvil Base" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 10.0
+margin_top = 172.0
+margin_right = 130.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 61 )
+
+[node name="Carve Anvil Base" parent="Contents/Resources/First Row/Anvil Base/Anvil Base" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Carve Anvil Base"
+Requires = [ "Wood", "Knife", "Hammer" ]
+RequiredAmount = [ 1.0, 1.0, 0.1 ]
+Produces = [ "Anvil Base" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Second Row" type="HBoxContainer" parent="Contents/Resources"]
+margin_top = 280.0
+margin_right = 2431.0
+margin_bottom = 534.0
+
+[node name="Helm" type="VBoxContainer" parent="Contents/Resources/Second Row"]
+editor/display_folded = true
+margin_right = 119.0
+margin_bottom = 254.0
+
+[node name="Iron Rivet" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 1.0
+margin_right = 118.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 62 )
+
+[node name="Make Iron Rivet" parent="Contents/Resources/Second Row/Helm/Iron Rivet" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 117.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Iron Rivet"
+Requires = [ "Dull Needle", "Hammer" ]
+RequiredAmount = [ 1.0, 0.1 ]
+Produces = [ "Iron Rivet" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Iron Sheet" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
+margin_right = 119.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 63 )
+
+[node name="Make Iron Sheet" parent="Contents/Resources/Second Row/Helm/Iron Sheet" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 119.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Iron Sheet"
+Requires = [ "Iron Ingot", "Forge", "Fire", "Charcoal", "Hammer", "Anvil" ]
+RequiredAmount = [ 2.0, 0.1, 1.0, 10.0, 0.1, 0.1 ]
+Produces = [ "Iron Sheet" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Iron Helm" parent="Contents/Resources/Second Row/Helm" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 2.0
+margin_top = 172.0
+margin_right = 116.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 64 )
+
+[node name="Make Iron Helm" parent="Contents/Resources/Second Row/Helm/Iron Helm" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 114.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Make Iron Helm"
+Requires = [ "Iron Sheet", "Iron Rivet", "Leather Strip", "Knife", "Thread", "Needle", "Hammer", "Anvil" ]
+RequiredAmount = [ 3.0, 20.0, 7.0, 0.2, 0.5, 1.0, 0.1, 0.1 ]
+Produces = [ "Iron Helm", "Dull Needle" ]
+ProducedAmount = [ 1.0, 1.0 ]
+
+[node name="Misc" type="VBoxContainer" parent="Contents/Resources/Second Row"]
+editor/display_folded = true
+margin_left = 123.0
+margin_right = 261.0
+margin_bottom = 254.0
+
+[node name="Anvil" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 16.0
+margin_right = 121.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 65 )
+
+[node name="Assemble Anvil" parent="Contents/Resources/Second Row/Misc/Anvil" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 105.0
+margin_bottom = 82.0
+hint_tooltip = ""
+custom_fonts/font = SubResource( 1 )
+text = "Assemble Anvil"
+Requires = [ "Anvil Head", "Anvil Base" ]
+RequiredAmount = [ 1.0, 1.0 ]
+Produces = [ "Anvil" ]
+ProducedAmount = [ 1.0 ]
+
+[node name="Leather Armor" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
 margin_right = 138.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 66 )
+
+[node name="Craft Leather Armor" parent="Contents/Resources/Second Row/Misc/Leather Armor" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 138.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Craft Leather Armor"
@@ -1624,10 +1414,18 @@ RequiredAmount = [ 20.0, 10.0, 1.0, 1.0, 1.0 ]
 Produces = [ "Leather Armor", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Craft Waterskin" parent="Contents/Actions/Middle Row/Misc" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 138.0
-margin_bottom = 48.0
+[node name="Waterskin" parent="Contents/Resources/Second Row/Misc" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 11.0
+margin_top = 172.0
+margin_right = 127.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 67 )
+
+[node name="Craft Waterskin" parent="Contents/Resources/Second Row/Misc/Waterskin" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 116.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Craft Waterskin"
@@ -1636,22 +1434,42 @@ RequiredAmount = [ 2.0, 2.0, 0.1, 1.0, 0.2 ]
 Produces = [ "Waterskin", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Torch" parent="Contents/Actions/Middle Row/Misc" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 138.0
-margin_bottom = 74.0
+[node name="Misc2" type="VBoxContainer" parent="Contents/Resources/Second Row"]
+editor/display_folded = true
+margin_left = 265.0
+margin_right = 399.0
+margin_bottom = 254.0
+
+[node name="Torch" parent="Contents/Resources/Second Row/Misc2" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 19.0
+margin_right = 114.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 68 )
+
+[node name="Craft Torch" parent="Contents/Resources/Second Row/Misc2/Torch" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 95.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
-text = "Torch"
+text = "Craft Torch"
 Requires = [ "Wood Handle", "Charcoal", "Fire" ]
 RequiredAmount = [ 1.0, 1.0, 1.0 ]
 Produces = [ "Torch" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Craft Leather Mask" parent="Contents/Actions/Middle Row/Misc" instance=ExtResource( 5 )]
-margin_top = 78.0
-margin_right = 138.0
-margin_bottom = 100.0
+[node name="Leather Mask" parent="Contents/Resources/Second Row/Misc2" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
+margin_right = 134.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 69 )
+
+[node name="Craft Leather Mask" parent="Contents/Resources/Second Row/Misc2/Leather Mask" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 134.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Craft Leather Mask"
@@ -1660,19 +1478,23 @@ RequiredAmount = [ 0.1, 2.0, 3.0, 1.0, 0.5 ]
 Produces = [ "Leather Mask", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Final Row" type="HBoxContainer" parent="Contents/Actions"]
+[node name="Green Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
 editor/display_folded = true
-margin_top = 302.0
-margin_right = 1287.0
-margin_bottom = 376.0
+margin_left = 403.0
+margin_right = 563.0
+margin_bottom = 254.0
 
-[node name="Green Dragon" type="VBoxContainer" parent="Contents/Actions/Final Row"]
+[node name="Discovered Cave" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
 editor/display_folded = true
-margin_right = 186.0
-margin_bottom = 74.0
+margin_left = 18.0
+margin_right = 141.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 70 )
 
-[node name="Explore Mountains" parent="Contents/Actions/Final Row/Green Dragon" instance=ExtResource( 5 )]
-margin_right = 186.0
+[node name="Explore Mountains" parent="Contents/Resources/Second Row/Green Dragon/Discovered Cave" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 123.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Explore Mountains"
@@ -1681,22 +1503,36 @@ RequiredAmount = [ 0.1, 0.1, 0.2 ]
 Produces = [ "Discovered Cave" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Make Offering to Green Dragon" parent="Contents/Actions/Final Row/Green Dragon" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 186.0
-margin_bottom = 48.0
+[node name="Green Dragon Scale" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 86.0
+margin_right = 160.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 71 )
+
+[node name="Trade with Green Dragon" parent="Contents/Resources/Second Row/Green Dragon/Green Dragon Scale" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
-text = "Make Offering to Green Dragon"
+text = "Trade with Green Dragon"
 Requires = [ "Discovered Cave", "Hare", "Morning Glory" ]
 RequiredAmount = [ 12.0, 50.0, 100.0 ]
 Produces = [ "Green Dragon Scale" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Construct Hexproof Shield" parent="Contents/Actions/Final Row/Green Dragon" instance=ExtResource( 5 )]
-margin_top = 52.0
-margin_right = 186.0
-margin_bottom = 74.0
+[node name="Hexproof Shield" parent="Contents/Resources/Second Row/Green Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 172.0
+margin_right = 159.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 72 )
+
+[node name="Construct Hexproof Shield" parent="Contents/Resources/Second Row/Green Dragon/Hexproof Shield" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 159.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Construct Hexproof Shield"
@@ -1705,14 +1541,23 @@ RequiredAmount = [ 1.0, 4.0, 0.1, 1.0, 0.5 ]
 Produces = [ "Hexproof Shield", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Blue Dragon" type="VBoxContainer" parent="Contents/Actions/Final Row"]
+[node name="Blue Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
 editor/display_folded = true
-margin_left = 190.0
-margin_right = 340.0
-margin_bottom = 74.0
+margin_left = 567.0
+margin_right = 717.0
+margin_bottom = 254.0
 
-[node name="Explore Forest" parent="Contents/Actions/Final Row/Blue Dragon" instance=ExtResource( 5 )]
-margin_right = 150.0
+[node name="Discovered Lake" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 21.0
+margin_right = 128.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 73 )
+
+[node name="Explore Forest" parent="Contents/Resources/Second Row/Blue Dragon/Discovered Lake" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 107.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Explore Forest"
@@ -1721,10 +1566,18 @@ RequiredAmount = [ 0.1, 0.1, 0.2, 1.0 ]
 Produces = [ "Discovered Lake" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Slay Blue Dragon" parent="Contents/Actions/Final Row/Blue Dragon" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 150.0
-margin_bottom = 48.0
+[node name="Blue Dragon Gills" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 15.0
+margin_top = 86.0
+margin_right = 134.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 74 )
+
+[node name="Slay Blue Dragon" parent="Contents/Resources/Second Row/Blue Dragon/Blue Dragon Gills" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 119.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Slay Blue Dragon"
@@ -1733,10 +1586,17 @@ RequiredAmount = [ 8.0, 10.0, 1.0, 1.0, 2.0 ]
 Produces = [ "Blue Dragon Gills" ]
 ProducedAmount = [ 12.0 ]
 
-[node name="Helm of Waterbreathing" parent="Contents/Actions/Final Row/Blue Dragon" instance=ExtResource( 5 )]
-margin_top = 52.0
+[node name="Helm of Waterbreathing" parent="Contents/Resources/Second Row/Blue Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 172.0
 margin_right = 150.0
-margin_bottom = 74.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 75 )
+
+[node name="Helm of Waterbreathing" parent="Contents/Resources/Second Row/Blue Dragon/Helm of Waterbreathing" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Helm of Waterbreathing"
@@ -1745,14 +1605,23 @@ RequiredAmount = [ 6.0, 1.0, 1.0, 6.0, 1.0, 1.0, 3.0, 2.0 ]
 Produces = [ "Helm of Waterbreathing", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
-[node name="Red Dragon" type="VBoxContainer" parent="Contents/Actions/Final Row"]
+[node name="Red Dragon" type="VBoxContainer" parent="Contents/Resources/Second Row"]
 editor/display_folded = true
-margin_left = 344.0
-margin_right = 490.0
-margin_bottom = 74.0
+margin_left = 721.0
+margin_right = 867.0
+margin_bottom = 254.0
 
-[node name="Explore Desert" parent="Contents/Actions/Final Row/Red Dragon" instance=ExtResource( 5 )]
-margin_right = 146.0
+[node name="Discovered Ruins" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 19.0
+margin_right = 126.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 76 )
+
+[node name="Explore Desert" parent="Contents/Resources/Second Row/Red Dragon/Discovered Ruins" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 107.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Explore Desert"
@@ -1761,10 +1630,18 @@ RequiredAmount = [ 0.1, 0.2 ]
 Produces = [ "Discovered Ruins" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Slay Red Dragon" parent="Contents/Actions/Final Row/Red Dragon" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 146.0
-margin_bottom = 48.0
+[node name="Red Dragon Tooth" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 15.0
+margin_top = 86.0
+margin_right = 131.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 77 )
+
+[node name="Slay Red Dragon" parent="Contents/Resources/Second Row/Red Dragon/Red Dragon Tooth" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 116.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Slay Red Dragon"
@@ -1773,10 +1650,17 @@ RequiredAmount = [ 7.0, 1.0, 0.2, 0.5, 1.0 ]
 Produces = [ "Red Dragon Tooth" ]
 ProducedAmount = [ 48.0 ]
 
-[node name="Forge Fireproof Armor" parent="Contents/Actions/Final Row/Red Dragon" instance=ExtResource( 5 )]
-margin_top = 52.0
+[node name="Fireproof Armor" parent="Contents/Resources/Second Row/Red Dragon" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_top = 172.0
 margin_right = 146.0
-margin_bottom = 74.0
+margin_bottom = 254.0
+ResourceTexture = ExtResource( 78 )
+
+[node name="Forge Fireproof Armor" parent="Contents/Resources/Second Row/Red Dragon/Fireproof Armor" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 146.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Forge Fireproof Armor"
@@ -1785,14 +1669,21 @@ RequiredAmount = [ 50.0, 1.0, 1.0, 10.0, 20.0, 2.0, 10.0, 200.0, 1.0 ]
 Produces = [ "Fireproof Armor" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Final Battle" type="VBoxContainer" parent="Contents/Actions/Final Row"]
-editor/display_folded = true
-margin_left = 494.0
-margin_right = 620.0
-margin_bottom = 74.0
+[node name="Final Battle" type="VBoxContainer" parent="Contents/Resources/Second Row"]
+margin_left = 871.0
+margin_right = 997.0
+margin_bottom = 254.0
 
-[node name="Defeat the Wizard" parent="Contents/Actions/Final Row/Final Battle" instance=ExtResource( 5 )]
+[node name="Defeated Wizard" parent="Contents/Resources/Second Row/Final Battle" instance=ExtResource( 3 )]
+editor/display_folded = true
 margin_right = 126.0
+margin_bottom = 82.0
+ResourceTexture = ExtResource( 79 )
+
+[node name="Defeat the Wizard" parent="Contents/Resources/Second Row/Final Battle/Defeated Wizard" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 126.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Defeat the Wizard"
@@ -1801,10 +1692,18 @@ RequiredAmount = [ 1.0, 1.0, 1.0 ]
 Produces = [ "Defeated Wizard" ]
 ProducedAmount = [ 1.0 ]
 
-[node name="Save the Princess" parent="Contents/Actions/Final Row/Final Battle" instance=ExtResource( 5 )]
-margin_top = 26.0
-margin_right = 126.0
-margin_bottom = 48.0
+[node name="Princess" parent="Contents/Resources/Second Row/Final Battle" instance=ExtResource( 3 )]
+editor/display_folded = true
+margin_left = 1.0
+margin_top = 86.0
+margin_right = 125.0
+margin_bottom = 168.0
+ResourceTexture = ExtResource( 80 )
+
+[node name="Save the Princess" parent="Contents/Resources/Second Row/Final Battle/Princess" instance=ExtResource( 5 )]
+margin_top = 60.0
+margin_right = 124.0
+margin_bottom = 82.0
 hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Save the Princess"
