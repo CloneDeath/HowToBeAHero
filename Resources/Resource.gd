@@ -9,6 +9,7 @@ var produces = 0;
 var crafted = false;
 
 func _ready():
+	$Image/NewTag.visible = true;
 	if (!Engine.editor_hint):
 		$Image.visible = false;
 		$Name.visible = false;
@@ -37,6 +38,7 @@ func _process(_delta):
 		$Name.visible = true;
 		$Count.visible = true;
 		crafted = true;
+		$Image/NewTag.visible = false;
 
 func reveal(resource):
 	if (name != resource): return;
