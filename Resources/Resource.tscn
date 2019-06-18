@@ -9,7 +9,9 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
-[node name="Resource" type="VBoxContainer"]
+[node name="Resource" type="VBoxContainer" groups=[
+"resource",
+]]
 margin_right = 73.0
 margin_bottom = 60.0
 size_flags_horizontal = 4

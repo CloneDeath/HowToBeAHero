@@ -6,10 +6,13 @@ export(Texture) var ResourceTexture = null;
 var count = 0;
 var required = 0;
 var produces = 0;
+var revealed = false;
 
 func _ready():
 	if (!Engine.editor_hint):
-		self.visible = false;
+		$Image.visible = false;
+		$Name.visible = false;
+		$Count.visible = false;
 
 func _process(_delta):
 	if (count <= 0): count = 0;
@@ -30,13 +33,16 @@ func _process(_delta):
 	
 	$Image.texture = ResourceTexture;
 	if (count > 0):
-		self.visible = true;
+		$Image.visible = true;
+		$Name.visible = true;
+		$Count.visible = true;
+		revealed = true;
 
 func has_resource(resource, amount):
 	return name == resource && _has_enough(amount);
 
 func resource_is_visible(resource):
-	return name == resource && self.visible;
+	return name == resource && self.revealed;
 
 func take_resource(resource, amount):
 	if (name != resource): return;
