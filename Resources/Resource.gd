@@ -46,6 +46,9 @@ func reveal(resource):
 	$Name.visible = true;
 	$Count.visible = true;
 
+func has_been_revealed():
+	return $Image.visible;
+
 func has_resource(resource, amount):
 	return name == resource && _has_enough(amount);
 
