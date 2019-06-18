@@ -701,7 +701,6 @@ margin_bottom = 188.0
 ResourceTexture = ExtResource( 69 )
 
 [node name="Blue Dragon" type="VBoxContainer" parent="Second Row"]
-editor/display_folded = true
 margin_left = 293.0
 margin_right = 404.0
 margin_bottom = 188.0
