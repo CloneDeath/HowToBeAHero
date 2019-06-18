@@ -66,5 +66,5 @@ func clear_products():
 		child.clear_products();
 		
 func add_product(resource, amount):
-	for child in get_children():
+	for child in _get_resources():
 		child.add_product(resource, amount);
