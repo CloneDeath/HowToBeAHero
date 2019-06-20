@@ -106,7 +106,6 @@ margin_right = 1317.0
 margin_bottom = 680.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-editor/display_folded = true
 margin_right = 1317.0
 margin_bottom = 396.0
 
@@ -639,20 +638,17 @@ Produces = [ "Axe" ]
 ProducedAmount = [ 1 ]
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-editor/display_folded = true
 margin_left = 697.0
 margin_right = 1317.0
 margin_bottom = 396.0
 columns = 2
 
 [node name="Rubber" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource( 3 )]
-editor/display_folded = true
 margin_left = 0.0
 margin_right = 330.0
 margin_bottom = 196.0
 
 [node name="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Rubber" index="0"]
-editor/display_folded = true
 margin_right = 323.0
 margin_bottom = 189.0
 
@@ -661,7 +657,6 @@ margin_right = 316.0
 text = "Rubber"
 
 [node name="Resources" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Rubber/VBoxContainer" index="1"]
-editor/display_folded = true
 margin_right = 316.0
 margin_bottom = 182.0
 
@@ -762,7 +757,6 @@ Produces = [ "Morning Glory Juice" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Rubber" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Rubber/VBoxContainer/Resources" index="5" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 232.0
 margin_top = 84.0
 margin_right = 295.0
@@ -779,7 +773,7 @@ text = "Mix Rubber"
 Requires = [ "Rubber Sap", "Morning Glory Juice" ]
 RequiredAmount = [ 1.0, 1.0 ]
 Produces = [ "Rubber", "Wooden Bowl" ]
-ProducedAmount = [ 1.0, 2.0 ]
+ProducedAmount = [ 2.0, 2.0 ]
 
 [node name="Sewing" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource( 3 )]
 editor/display_folded = true
@@ -1053,14 +1047,12 @@ Produces = [ "Sword" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Armor" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource( 3 )]
-editor/display_folded = true
 margin_left = 334.0
 margin_top = 200.0
 margin_right = 620.0
 margin_bottom = 396.0
 
 [node name="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Armor" index="0"]
-editor/display_folded = true
 margin_right = 279.0
 margin_bottom = 189.0
 
@@ -1073,7 +1065,6 @@ margin_right = 272.0
 margin_bottom = 182.0
 
 [node name="Boots" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Armor/VBoxContainer/Resources" index="0" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_right = 66.0
 margin_bottom = 80.0
 ResourceTexture = ExtResource( 49 )
@@ -1086,12 +1077,11 @@ hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Boots"
 Requires = [ "Leather", "Knife", "Needle", "Thread", "Rubber", "Leather Strip" ]
-RequiredAmount = [ 4.0, 0.1, 1.0, 1.0, 3.0, 4.0 ]
+RequiredAmount = [ 4.0, 0.1, 1.0, 1.0, 1.0, 4.0 ]
 Produces = [ "Boots", "Dull Needle" ]
 ProducedAmount = [ 2.0, 1.0 ]
 
 [node name="Leather Armor" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Armor/VBoxContainer/Resources" index="1" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 70.0
 margin_right = 181.0
 margin_bottom = 80.0
@@ -1129,7 +1119,6 @@ Produces = [ "Iron Helm", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Cloak" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GridContainer/Armor/VBoxContainer/Resources" index="3" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_top = 84.0
 margin_right = 65.0
 margin_bottom = 164.0
@@ -1143,7 +1132,7 @@ hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Make Cloak"
 Requires = [ "Pelt", "Needle", "Thread", "Knife" ]
-RequiredAmount = [ 40.0, 1.0, 2.0, 0.5 ]
+RequiredAmount = [ 20.0, 1.0, 2.0, 0.5 ]
 Produces = [ "Cloak", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
@@ -1571,7 +1560,6 @@ Produces = [ "Torch" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Dragons" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 3 )]
-editor/display_folded = true
 margin_left = 694.0
 margin_right = 1077.0
 margin_bottom = 280.0
@@ -1589,7 +1577,6 @@ margin_right = 369.0
 margin_bottom = 266.0
 
 [node name="Discovered Cave" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="0" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_right = 96.0
 margin_bottom = 80.0
 ResourceTexture = ExtResource( 71 )
@@ -1607,7 +1594,6 @@ Produces = [ "Discovered Cave" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Green Dragon Scale" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="1" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 100.0
 margin_right = 233.0
 margin_bottom = 80.0
@@ -1621,7 +1607,7 @@ hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Trade with Green Dragon"
 Requires = [ "Discovered Cave", "Hare", "Morning Glory" ]
-RequiredAmount = [ 12.0, 50.0, 100.0 ]
+RequiredAmount = [ 1.0, 50.0, 100.0 ]
 Produces = [ "Green Dragon Scale" ]
 ProducedAmount = [ 1.0 ]
 
@@ -1645,7 +1631,6 @@ Produces = [ "Hexproof Shield", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Discovered Lake" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="3" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 8.0
 margin_top = 84.0
 margin_right = 88.0
@@ -1665,7 +1650,6 @@ Produces = [ "Discovered Lake" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Blue Dragon Gills" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="4" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 120.0
 margin_top = 84.0
 margin_right = 212.0
@@ -1680,7 +1664,7 @@ hint_tooltip = ""
 custom_fonts/font = SubResource( 1 )
 text = "Slay Blue Dragon"
 Requires = [ "Discovered Lake", "Spear", "Knife", "Leather Armor", "Boots" ]
-RequiredAmount = [ 8.0, 10.0, 1.0, 1.0, 2.0 ]
+RequiredAmount = [ 3.0, 10.0, 1.0, 1.0, 2.0 ]
 Produces = [ "Blue Dragon Gills" ]
 ProducedAmount = [ 12.0 ]
 
@@ -1705,7 +1689,6 @@ Produces = [ "Helm of Waterbreathing", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="Discovered Ruins" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="6" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 8.0
 margin_top = 168.0
 margin_right = 88.0
@@ -1725,7 +1708,6 @@ Produces = [ "Discovered Ruins" ]
 ProducedAmount = [ 1.0 ]
 
 [node name="Red Dragon Tooth" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="7" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 122.0
 margin_top = 168.0
 margin_right = 211.0
@@ -1745,7 +1727,6 @@ Produces = [ "Red Dragon Tooth" ]
 ProducedAmount = [ 48.0 ]
 
 [node name="Fireproof Armor" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Dragons/VBoxContainer/Resources" index="8" instance=ExtResource( 4 )]
-editor/display_folded = true
 margin_left = 243.0
 margin_top = 168.0
 margin_right = 362.0
