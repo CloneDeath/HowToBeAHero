@@ -8,6 +8,9 @@ func _ready():
 		action.connect("mouse_entered", self, "_on_action_focused", [action]);
 		action.connect("mouse_exited", self, "_on_action_focus_lost", [action]);
 
+func _process(_delta):
+	$YouWin.visible = $Resources.resource_has_been_crafted("Princess");
+
 func _on_action_focused(action):
 	_current_action = action;
 	$Resources.clear_requirements();

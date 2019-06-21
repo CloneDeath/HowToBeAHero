@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://ResourceInteractor.gd" type="Script" id=2]
@@ -85,6 +85,10 @@
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 7 )
 
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 7 )
+
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -94,14 +98,17 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_right = 1317.0
 margin_bottom = 680.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+editor/display_folded = true
 margin_right = 1317.0
 margin_bottom = 680.0
 
@@ -1157,6 +1164,7 @@ Produces = [ "Leather Mask", "Dull Needle" ]
 ProducedAmount = [ 1.0, 1.0 ]
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 400.0
 margin_right = 1317.0
 margin_bottom = 680.0
@@ -1801,6 +1809,16 @@ Requires = [ "Defeated Wizard" ]
 RequiredAmount = [ 1.0 ]
 Produces = [ "Princess" ]
 ProducedAmount = [ 1.0 ]
+
+[node name="YouWin" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -55.0
+custom_fonts/font = SubResource( 2 )
+text = "You Win! Now, go outside, follow the above steps, and become a Hero!"
+align = 1
 
 [editable path="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Earth"]
 
